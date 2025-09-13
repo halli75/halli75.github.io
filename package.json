@@ -1,0 +1,11 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Static personal website for Arnav Gowda",
+  "scripts": {
+    "start": "live-server --port=8000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
