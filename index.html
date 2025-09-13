@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arnav Gowda | Portfolio</title>
+  <!-- Tailwind CSS via CDN with dark mode enabled -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // configure tailwind theme for accent color (blue) and dark mode
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              DEFAULT: '#2563eb', // blue accent
+              light: '#3b82f6',
+              dark: '#1e40af'
+            }
+          }
+        }
+      }
+    };
+  </script>
+    <!-- Define CSS variables for accent colors -->
+    <style>
+      :root {
+        --accent: #2563eb;
+        --accent-light: #3b82f6;
+        --accent-dark: #1e40af;
+      }
+    </style>
+  <link rel="icon" href="/assets/umd.png" />
+  <!-- We draw our own lightweight charts; no external chart library required -->
+  <!-- Simple Markdown Icons (Lucide) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased">
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 w-full z-20 backdrop-blur bg-white/80 dark:bg-gray-900/80 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="font-bold text-xl text-accent-DEFAULT">Arnav Gowda</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-accent-light transition-colors">Home</a>
+        <a href="#about" class="hover:text-accent-light transition-colors">About</a>
+        <a href="#education" class="hover:text-accent-light transition-colors">Education</a>
+        <a href="#experience" class="hover:text-accent-light transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-accent-light transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-accent-light transition-colors">Skills</a>
+        <a href="resume.html" class="hover:text-accent-light transition-colors">Resume</a>
+        <a href="#contact" class="hover:text-accent-light transition-colors">Contact</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden text-accent-DEFAULT focus:outline-none">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <!-- Dark mode toggle -->
+      <button id="themeToggle" class="ml-4 text-accent-DEFAULT focus:outline-none">
+        <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-12.485l-.707.707M4.222 19.778l-.707.707M21 12h-1M4 12H3m15.071 7.071l-.707-.707M5.636 5.636l-.707-.707" /></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white dark:bg-gray-900">
+      <a href="#home" class="block" onclick="toggleMenu()">Home</a>
+      <a href="#about" class="block" onclick="toggleMenu()">About</a>
+      <a href="#education" class="block" onclick="toggleMenu()">Education</a>
+      <a href="#experience" class="block" onclick="toggleMenu()">Experience</a>
+      <a href="#projects" class="block" onclick="toggleMenu()">Projects</a>
+      <a href="#skills" class="block" onclick="toggleMenu()">Skills</a>
+      <a href="resume.html" class="block">Resume</a>
+      <a href="#contact" class="block" onclick="toggleMenu()">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="pt-24 max-w-6xl mx-auto px-4 space-y-32">
+    <!-- Home Section -->
+    <section id="home" class="flex flex-col items-center text-center space-y-6">
+      <h2 class="text-4xl font-extrabold">Hello, I'm <span class="text-accent-DEFAULT">Arnav Gowda</span></h2>
+      <p class="max-w-2xl text-lg leading-relaxed">I'm a computer science student specializing in machine learning and applied mathematics. I build scalable applications, explore probabilistic decision making, and love pushing my limits—whether on the track or at the poker table.</p>
+      <div class="flex space-x-4 mt-4">
+        <a href="#about" class="px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Learn More</a>
+        <a href="resume.html" class="px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors">View Resume</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="space-y-16">
+      <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+      <!-- Running -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Distance Running</h3>
+          <p class="mb-4">Running teaches me resilience and discipline. I compete in track and road races, continually striving to set new personal bests.</p>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Mile PR: <strong>4:44.88</strong> at Outdoor Track & Field Championships</li>
+            <li>3200m PR: <strong>10:16.53</strong> at East Region Championships</li>
+            <li>5K PR: <strong>16:44.96</strong> at Zaching for Cancer Running Festival</li>
+            <li>Half Marathon PR: <strong>1:24:01</strong> at Philadelphia Half Marathon</li>
+          </ul>
+          <div class="mt-4 p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+            <h4 class="font-semibold mb-2">Recent 90-Day Totals</h4>
+            <p><span id="runDistance" class="font-bold text-accent-DEFAULT">—</span> miles run</p>
+            <p><span id="runCount" class="font-bold text-accent-DEFAULT">—</span> runs</p>
+            <p><span id="runTime" class="font-bold text-accent-DEFAULT">—</span> hours</p>
+            <small class="text-xs text-gray-600 dark:text-gray-400">Computed from Strava data</small>
+          </div>
+        </div>
+        <!-- Poker and Sports Cards side by side on desktop -->
+        <div class="space-y-8">
+          <!-- Poker -->
+          <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+            <h3 class="text-xl font-semibold mb-2 text-accent-DEFAULT">Poker</h3>
+            <p class="mb-2 text-sm">I apply game theory and statistics to gain an edge at the tables. My EV curve reflects disciplined bankroll management and optimal decision making.</p>
+            <div class="w-full h-56">
+              <canvas id="pokerChart"></canvas>
+            </div>
+            <div class="flex justify-center space-x-2 mt-2 text-sm">
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updatePokerRange(event)">1M</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updatePokerRange(event)">3M</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updatePokerRange(event)">1Y</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updatePokerRange(event)">All</button>
+            </div>
+            <small class="text-xs text-gray-600 dark:text-gray-400">Data pulled from my published Google Sheet</small>
+          </div>
+          <!-- Sports betting -->
+          <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+            <h3 class="text-xl font-semibold mb-2 text-accent-DEFAULT">Plus‑EV Sports Betting</h3>
+            <p class="mb-2 text-sm">I identify value bets using quantitative models and strict bankroll rules. Occasional downswings are part of the journey; the long-term edge prevails.</p>
+            <div class="w-full h-56">
+              <canvas id="sportsChart"></canvas>
+            </div>
+            <div class="flex justify-center space-x-2 mt-2 text-sm">
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updateSportsRange(event)">1M</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updateSportsRange(event)">3M</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updateSportsRange(event)">1Y</button>
+              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updateSportsRange(event)">All</button>
+            </div>
+            <small class="text-xs text-gray-600 dark:text-gray-400">Synthetic data (7% EV per bet, realistic swings)</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
+      <div class="space-y-4">
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+          <h3 class="text-2xl font-semibold text-accent-DEFAULT">University of Maryland, College Park</h3>
+          <p class="italic text-sm mb-1">B.S. Computer Science (Machine Learning), Applied Mathematics</p>
+          <p class="text-sm mb-2">GPA: 3.51 • Dean’s List</p>
+          <p class="text-sm">Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Information Systems, Database Design, Multivariate Calculus, Linear Algebra, Advanced Statistics, Differential Equations, Computer Systems, Real Analysis, Data Science.</p>
+        </div>
+        <!-- Add high school if desired in future -->
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Experience</h2>
+      <div class="space-y-6">
+        <!-- Ivoyant experience -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
+          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+            <!-- Placeholder for Ivoyant logo (text-based due to download restrictions) -->
+            <div class="w-16 h-16 rounded-full bg-accent-DEFAULT text-white flex items-center justify-center text-xl font-bold">I</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Software Engineering Intern – Ivoyant</h3>
+            <p class="text-sm italic mb-2">Atlanta, GA • Summer 2025</p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Designed and deployed RESTful APIs using Java and SQL for Data Mapper, an AI-driven data conversion platform, reducing data retrieval latency by 40%.</li>
+              <li>Migrated legacy infrastructure to Azure App Services and Azure Functions, building microservices to enhance scalability and improve deployment speed by 35%.</li>
+              <li>Implemented Agile workflows and CI/CD automation with Jenkins and Azure DevOps Server, improving system reliability and speeding up release cycles.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- UMD experience -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
+          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+            <img src="assets/umd.png" alt="UMD Logo" class="w-16 h-16 object-contain rounded" />
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">AI Research Intern – University of Maryland</h3>
+            <p class="text-sm italic mb-2">College Park, MD</p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Collaborated with professors and PhD researchers to build ML-based simulators in PyTorch and BioPython, accelerating multi-scale cell growth modeling by 10× versus traditional PDE methods.</li>
+              <li>Developed spatiotemporal models using ConvLSTM and graph neural networks to simulate nutrient diffusion, mitosis, and intercellular signaling with PyTorch and OpenMM.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Other work: Amateur Poker -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+          <h3 class="text-xl font-semibold">Other Work</h3>
+          <div class="mt-2">
+            <h4 class="font-semibold mb-1 text-accent-DEFAULT">Amateur Poker (NLHE)</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Applied probabilistic decision making and GTO-informed strategies to live and online cash games.</li>
+              <li>Tracked EV and variance across thousands of hands using custom spreadsheets and statistical tools.</li>
+              <li>Analyzed selection biases and mental game factors to maintain optimal bankroll management and control tilt.</li>
+            </ul>
+          </div>
+          <!-- Future entries (e.g., Teaching Assistant, clubs) can be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects & Research Section -->
+    <section id="projects" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Projects & Research</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Black-Scholes Project -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Black‑Scholes Options Pricing Model</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Built a Python engine using NumPy & SciPy to compute analytical values for European options, achieving <0.1% deviation from market benchmarks.</li>
+              <li>Engineered a vectorized batch-pricing module to value 20,000+ contracts in under 0.5s.</li>
+              <li>Implemented CLI and visualization tools for traders to price portfolios efficiently.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NumPy</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">SciPy</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/blackscholes_pricer" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Last‑Mile Delivery Platform -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Last‑Mile Delivery Platform</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Developed a microservices-based supply-chain delivery platform with 9 backend services (orders, routing, GPS, driver, customer, etc.) using Java Spring Boot and AWS.</li>
+              <li>Implemented secure, event-driven REST APIs with OAuth2, RabbitMQ, Kafka, and Spring Cloud Gateway, achieving <100ms latency.</li>
+              <li>Deployed to AWS with Docker Compose and added observability (Micrometer, Prometheus, Jaeger) for 100% uptime under load.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Java</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Spring Boot</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">AWS</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/Last-Mile-Delivery-Platform" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- AI Blackjack Card Counter -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">AI Blackjack Card Counter</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Created an AI-powered blackjack simulator in Python using TensorFlow and PyTorch to learn optimal play strategies.</li>
+              <li>Developed a custom data pipeline to compile game outcomes and support supervised & reinforcement learning.</li>
+              <li>Tuned models through hyperparameter optimization and used R for statistical modeling and EV tracking, achieving +2.2% EV/hr in simulations.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">TensorFlow</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">PyTorch</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">R</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/BlackjackCardCounter" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Research Paper 1 -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">NFT Valuation & Global Market Impact</h3>
+            <p class="text-sm my-2">A research paper analyzing non-fungible token valuation through financial models (Treynor ratio, Sharpe ratio, Jensen’s alpha) and its ripple effects on global markets. Concludes NFTs will evolve into asset security technology.</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Research</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NFTs</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Finance</span>
+            </div>
+          </div>
+          <a href="research/paper1.pdf" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light" target="_blank">View PDF</a>
+        </div>
+        <!-- AssetScanner Project -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">AssetScanner</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Built a scanner leveraging stock APIs to filter digital assets using technical indicators and fundamental factors.</li>
+              <li>Implemented customizable screening rules and alerting for value opportunities across equities and crypto markets.</li>
+              <li>Designed using Python and pandas with modular architecture for rapid strategy experimentation.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">pandas</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">APIs</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/AssetScanner" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Baccarat Simulation -->
+        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Baccarat Simulation</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Developed a Monte Carlo simulator for the baccarat casino game to analyze optimal betting strategies.</li>
+              <li>Evaluated expected returns under varying commission structures and banker/player bet distributions.</li>
+              <li>Visualized probability distributions and outcomes using matplotlib and seaborn.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NumPy</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Simulation</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/baccarat_sim" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <!-- Languages -->
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Java</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Python</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">C++</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">JavaScript</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">SQL</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">R</span>
+        <!-- Frameworks -->
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Spring Boot</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Node.js</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">React</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">TensorFlow</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">PyTorch</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">NumPy/SciPy</span>
+        <!-- Tools & DevOps -->
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Azure</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">AWS</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Docker</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Kubernetes</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Jenkins</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Git</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">RabbitMQ/Kafka</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">OpenMM</span>
+        <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-sm">Prometheus/Jaeger</span>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Contact</h2>
+      <p class="text-center">Feel free to connect with me on GitHub. My email and phone number are available on my résumé.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="https://github.com/halli75" target="_blank" class="flex items-center space-x-1 text-accent-DEFAULT hover:underline">
+          <span>GitHub</span>
+        </a>
+      </div>
+      <p class="text-center text-xs text-gray-600 dark:text-gray-400 mt-4">© 2025 Arnav Gowda. Built with love and Tailwind CSS.</p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Dark/light mode toggle and persistence
+    const htmlEl = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    function setDarkMode(isDark) {
+      if (isDark) {
+        htmlEl.classList.add('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-12.485l-.707.707M4.222 19.778l-.707.707M21 12h-1M4 12H3m15.071 7.071l-.707-.707M5.636 5.636l-.707-.707" />';
+      } else {
+        htmlEl.classList.remove('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />';
+      }
+    }
+    function toggleTheme() {
+      const isDark = htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      setDarkMode(isDark);
+    }
+    themeToggleBtn.addEventListener('click', toggleTheme);
+    // Initialize theme from storage or system preference
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = stored ? stored === 'dark' : prefersDark;
+      setDarkMode(isDark);
+    })();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+    menuBtn.addEventListener('click', toggleMenu);
+
+    // Data arrays for charts
+    let pokerData = [];
+    let sportsData = [];
+
+    // Fetch poker CSV from published Google Sheet and parse
+    async function loadPokerData() {
+      const csvUrl = 'https://docs.google.com/spreadsheets/d/1dpwwxn2avkUzymx83_BfbRH2NsWpwYnoeW_-Otkpi_A/export?format=csv';
+      try {
+        const resp = await fetch(csvUrl);
+        const text = await resp.text();
+        const rows = text.trim().split('\n');
+        const headers = rows[0].split(',');
+        const dateIdx = headers.indexOf('Date');
+        const plIdx = headers.indexOf('P/L');
+        let cumulative = 0;
+        pokerData = [];
+        for (let i = 1; i < rows.length; i++) {
+          const cols = rows[i].split(',');
+          if (!cols[dateIdx]) continue;
+          const date = new Date(cols[dateIdx]);
+          const pl = parseFloat(cols[plIdx] || 0);
+          if (!isNaN(pl)) {
+            cumulative += pl;
+            pokerData.push({ date: date, value: cumulative });
+          }
+        }
+      } catch (err) {
+        console.error('Error loading poker data:', err);
+      }
+    }
+
+    // Precomputed sports betting EV data for the past 12 months (synthetic with downswings and ~7% EV per bet).
+    // This dataset is generated in advance so that the chart renders correctly even when the site is viewed from a local
+    // file system (browsers block fetch calls on file://). Each entry has a date (YYYY-MM-DD) and cumulative EV value.
+    const sportsDataRaw = [{date: '2024-09-14', value: 0.00},{date: '2024-09-15', value: 2.28},{date: '2024-09-16', value: 2.28},{date: '2024-09-17', value: 2.28},{date: '2024-09-18', value: 6.04},{date: '2024-09-19', value: 6.04},{date: '2024-09-20', value: 6.04},{date: '2024-09-21', value: 8.92},{date: '2024-09-22', value: 8.92},{date: '2024-09-23', value: 10.10},{date: '2024-09-24', value: 10.10},{date: '2024-09-25', value: 17.73},{date: '2024-09-26', value: 17.73},{date: '2024-09-27', value: 17.73},{date: '2024-09-28', value: 17.73},{date: '2024-09-29', value: 17.73},{date: '2024-09-30', value: 25.27},{date: '2024-10-01', value: 30.76},{date: '2024-10-02', value: 30.76},{date: '2024-10-03', value: 37.99},{date: '2024-10-04', value: 37.99},{date: '2024-10-05', value: 38.73},{date: '2024-10-06', value: 38.73},{date: '2024-10-07', value: 46.06},{date: '2024-10-08', value: 46.06},{date: '2024-10-09', value: 46.06},{date: '2024-10-10', value: 46.06},{date: '2024-10-11', value: 46.06},{date: '2024-10-12', value: 59.96},{date: '2024-10-13', value: 59.96},{date: '2024-10-14', value: 59.96},{date: '2024-10-15', value: 61.23},{date: '2024-10-16', value: 61.23},{date: '2024-10-17', value: 61.23},{date: '2024-10-18', value: 61.23},{date: '2024-10-19', value: 61.23},{date: '2024-10-20', value: 61.23},{date: '2024-10-21', value: 61.23},{date: '2024-10-22', value: 61.23},{date: '2024-10-23', value: 61.23},{date: '2024-10-24', value: 68.45},{date: '2024-10-25', value: 68.45},{date: '2024-10-26', value: 68.45},{date: '2024-10-27', value: 68.45},{date: '2024-10-28', value: 68.45},{date: '2024-10-29', value: 68.45},{date: '2024-10-30', value: 72.31},{date: '2024-10-31', value: 72.31},{date: '2024-11-01', value: 71.78},{date: '2024-11-02', value: 71.29},{date: '2024-11-03', value: 68.68},{date: '2024-11-04', value: 68.68},{date: '2024-11-05', value: 66.00},{date: '2024-11-06', value: 66.00},{date: '2024-11-07', value: 66.00},{date: '2024-11-08', value: 61.03},{date: '2024-11-09', value: 61.03},{date: '2024-11-10', value: 61.03},{date: '2024-11-11', value: 61.03},{date: '2024-11-12', value: 57.56},{date: '2024-11-13', value: 56.64},{date: '2024-11-14', value: 55.62},{date: '2024-11-15', value: 53.08},{date: '2024-11-16', value: 53.08},{date: '2024-11-17', value: 53.08},{date: '2024-11-18', value: 52.19},{date: '2024-11-19', value: 52.19},{date: '2024-11-20', value: 52.19},{date: '2024-11-21', value: 52.19},{date: '2024-11-22', value: 52.19},{date: '2024-11-23', value: 52.19},{date: '2024-11-24', value: 48.38},{date: '2024-11-25', value: 48.38},{date: '2024-11-26', value: 44.77},{date: '2024-11-27', value: 44.77},{date: '2024-11-28', value: 43.34},{date: '2024-11-29', value: 43.34},{date: '2024-11-30', value: 43.34},{date: '2024-12-01', value: 44.62},{date: '2024-12-02', value: 44.62},{date: '2024-12-03', value: 58.80},{date: '2024-12-04', value: 64.51},{date: '2024-12-05', value: 64.51},{date: '2024-12-06', value: 64.51},{date: '2024-12-07', value: 64.51},{date: '2024-12-08', value: 64.51},{date: '2024-12-09', value: 64.51},{date: '2024-12-10', value: 71.43},{date: '2024-12-11', value: 71.43},{date: '2024-12-12', value: 71.43},{date: '2024-12-13', value: 71.43},{date: '2024-12-14', value: 74.84},{date: '2024-12-15', value: 88.30},{date: '2024-12-16', value: 88.30},{date: '2024-12-17', value: 88.30},{date: '2024-12-18', value: 88.30},{date: '2024-12-19', value: 90.88},{date: '2024-12-20', value: 94.04},{date: '2024-12-21', value: 94.04},{date: '2024-12-22', value: 94.04},{date: '2024-12-23', value: 94.04},{date: '2024-12-24', value: 100.09},{date: '2024-12-25', value: 100.09},{date: '2024-12-26', value: 100.09},{date: '2024-12-27', value: 100.09},{date: '2024-12-28', value: 100.09},{date: '2024-12-29', value: 100.09},{date: '2024-12-30', value: 100.09},{date: '2024-12-31', value: 100.09},{date: '2025-01-01', value: 105.90},{date: '2025-01-02', value: 105.90},{date: '2025-01-03', value: 112.10},{date: '2025-01-04', value: 112.10},{date: '2025-01-05', value: 112.10},{date: '2025-01-06', value: 112.10},{date: '2025-01-07', value: 112.10},{date: '2025-01-08', value: 120.70},{date: '2025-01-09', value: 120.70},{date: '2025-01-10', value: 120.70},{date: '2025-01-11', value: 120.70},{date: '2025-01-12', value: 120.70},{date: '2025-01-13', value: 122.89},{date: '2025-01-14', value: 122.89},{date: '2025-01-15', value: 122.89},{date: '2025-01-16', value: 125.92},{date: '2025-01-17', value: 126.74},{date: '2025-01-18', value: 126.74},{date: '2025-01-19', value: 137.03},{date: '2025-01-20', value: 137.03},{date: '2025-01-21', value: 141.03},{date: '2025-01-22', value: 155.08},{date: '2025-01-23', value: 155.08},{date: '2025-01-24', value: 155.08},{date: '2025-01-25', value: 155.08},{date: '2025-01-26', value: 156.25},{date: '2025-01-27', value: 156.25},{date: '2025-01-28', value: 156.25},{date: '2025-01-29', value: 158.54},{date: '2025-01-30', value: 158.54},{date: '2025-01-31', value: 158.54},{date: '2025-02-01', value: 148.15},{date: '2025-02-02', value: 148.15},{date: '2025-02-03', value: 148.15},{date: '2025-02-04', value: 148.15},{date: '2025-02-05', value: 148.15},{date: '2025-02-06', value: 148.15},{date: '2025-02-07', value: 148.15},{date: '2025-02-08', value: 146.07},{date: '2025-02-09', value: 140.37},{date: '2025-02-10', value: 135.83},{date: '2025-02-11', value: 135.83},{date: '2025-02-12', value: 135.83},{date: '2025-02-13', value: 135.83},{date: '2025-02-14', value: 134.74},{date: '2025-02-15', value: 130.98},{date: '2025-02-16', value: 127.33},{date: '2025-02-17', value: 127.33},{date: '2025-02-18', value: 127.33},{date: '2025-02-19', value: 127.33},{date: '2025-02-20', value: 127.33},{date: '2025-02-21', value: 122.17},{date: '2025-02-22', value: 122.17},{date: '2025-02-23', value: 117.08},{date: '2025-02-24', value: 117.08},{date: '2025-02-25', value: 117.08},{date: '2025-02-26', value: 117.08},{date: '2025-02-27', value: 115.11},{date: '2025-02-28', value: 110.72},{date: '2025-03-01', value: 118.90},{date: '2025-03-02', value: 118.90},{date: '2025-03-03', value: 129.15},{date: '2025-03-04', value: 129.15},{date: '2025-03-05', value: 129.15},{date: '2025-03-06', value: 129.15},{date: '2025-03-07', value: 129.15},{date: '2025-03-08', value: 129.15},{date: '2025-03-09', value: 130.53},{date: '2025-03-10', value: 141.47},{date: '2025-03-11', value: 145.78},{date: '2025-03-12', value: 145.78},{date: '2025-03-13', value: 145.78},{date: '2025-03-14', value: 145.78},{date: '2025-03-15', value: 145.78},{date: '2025-03-16', value: 145.78},{date: '2025-03-17', value: 145.78},{date: '2025-03-18', value: 145.78},{date: '2025-03-19', value: 149.07},{date: '2025-03-20', value: 149.07},{date: '2025-03-21', value: 150.37},{date: '2025-03-22', value: 150.37},{date: '2025-03-23', value: 150.37},{date: '2025-03-24', value: 150.37},{date: '2025-03-25', value: 150.37},{date: '2025-03-26', value: 150.37},{date: '2025-03-27', value: 158.18},{date: '2025-03-28', value: 158.18},{date: '2025-03-29', value: 158.18},{date: '2025-03-30', value: 158.18},{date: '2025-03-31', value: 158.18},{date: '2025-04-01', value: 158.18},{date: '2025-04-02', value: 158.18},{date: '2025-04-03', value: 158.18},{date: '2025-04-04', value: 158.18},{date: '2025-04-05', value: 158.18},{date: '2025-04-06', value: 169.32},{date: '2025-04-07', value: 174.41},{date: '2025-04-08', value: 174.41},{date: '2025-04-09', value: 174.41},{date: '2025-04-10', value: 179.48},{date: '2025-04-11', value: 179.48},{date: '2025-04-12', value: 180.71},{date: '2025-04-13', value: 180.71},{date: '2025-04-14', value: 180.71},{date: '2025-04-15', value: 180.71},{date: '2025-04-16', value: 185.87},{date: '2025-04-17', value: 185.87},{date: '2025-04-18', value: 185.87},{date: '2025-04-19', value: 185.87},{date: '2025-04-20', value: 193.74},{date: '2025-04-21', value: 193.74},{date: '2025-04-22', value: 193.74},{date: '2025-04-23', value: 193.74},{date: '2025-04-24', value: 193.74},{date: '2025-04-25', value: 193.74},{date: '2025-04-26', value: 195.62},{date: '2025-04-27', value: 195.62},{date: '2025-04-28', value: 205.42},{date: '2025-04-29', value: 205.42},{date: '2025-04-30', value: 205.42},{date: '2025-05-01', value: 205.42},{date: '2025-05-02', value: 205.42},{date: '2025-05-03', value: 205.42},{date: '2025-05-04', value: 205.42},{date: '2025-05-05', value: 214.02},{date: '2025-05-06', value: 214.02},{date: '2025-05-07', value: 214.02},{date: '2025-05-08', value: 214.02},{date: '2025-05-09', value: 214.02},{date: '2025-05-10', value: 215.98},{date: '2025-05-11', value: 215.98},{date: '2025-05-12', value: 215.98},{date: '2025-05-13', value: 215.98},{date: '2025-05-14', value: 215.98},{date: '2025-05-15', value: 221.86},{date: '2025-05-16', value: 227.91},{date: '2025-05-17', value: 227.91},{date: '2025-05-18', value: 227.91},{date: '2025-05-19', value: 227.91},{date: '2025-05-20', value: 227.91},{date: '2025-05-21', value: 227.91},{date: '2025-05-22', value: 227.91},{date: '2025-05-23', value: 227.91},{date: '2025-05-24', value: 231.77},{date: '2025-05-25', value: 231.77},{date: '2025-05-26', value: 231.77},{date: '2025-05-27', value: 234.46},{date: '2025-05-28', value: 234.46},{date: '2025-05-29', value: 234.46},{date: '2025-05-30', value: 234.46},{date: '2025-05-31', value: 234.46},{date: '2025-06-01', value: 234.46},{date: '2025-06-02', value: 234.46},{date: '2025-06-03', value: 237.29},{date: '2025-06-04', value: 237.29},{date: '2025-06-05', value: 241.56},{date: '2025-06-06', value: 244.67},{date: '2025-06-07', value: 244.67},{date: '2025-06-08', value: 244.67},{date: '2025-06-09', value: 244.67},{date: '2025-06-10', value: 244.67},{date: '2025-06-11', value: 244.67},{date: '2025-06-12', value: 248.95},{date: '2025-06-13', value: 248.95},{date: '2025-06-14', value: 248.95},{date: '2025-06-15', value: 248.95},{date: '2025-06-16', value: 251.93},{date: '2025-06-17', value: 251.93},{date: '2025-06-18', value: 251.93},{date: '2025-06-19', value: 258.34},{date: '2025-06-20', value: 258.34},{date: '2025-06-21', value: 258.34},{date: '2025-06-22', value: 258.34},{date: '2025-06-23', value: 258.34},{date: '2025-06-24', value: 258.34},{date: '2025-06-25', value: 258.34},{date: '2025-06-26', value: 258.34},{date: '2025-06-27', value: 258.34},{date: '2025-06-28', value: 258.34},{date: '2025-06-29', value: 258.34},{date: '2025-06-30', value: 265.58},{date: '2025-07-01', value: 265.58},{date: '2025-07-02', value: 265.58},{date: '2025-07-03', value: 265.58},{date: '2025-07-04', value: 265.58},{date: '2025-07-05', value: 272.39},{date: '2025-07-06', value: 272.39},{date: '2025-07-07', value: 275.97},{date: '2025-07-08', value: 275.97},{date: '2025-07-09', value: 279.77},{date: '2025-07-10', value: 283.35},{date: '2025-07-11', value: 293.23},{date: '2025-07-12', value: 293.23},{date: '2025-07-13', value: 298.97},{date: '2025-07-14', value: 300.94},{date: '2025-07-15', value: 300.94},{date: '2025-07-16', value: 300.94},{date: '2025-07-17', value: 307.46},{date: '2025-07-18', value: 307.46},{date: '2025-07-19', value: 307.46},{date: '2025-07-20', value: 315.32},{date: '2025-07-21', value: 319.74},{date: '2025-07-22', value: 319.74},{date: '2025-07-23', value: 330.78},{date: '2025-07-24', value: 330.78},{date: '2025-07-25', value: 335.36},{date: '2025-07-26', value: 344.03},{date: '2025-07-27', value: 345.13},{date: '2025-07-28', value: 345.13},{date: '2025-07-29', value: 345.13},{date: '2025-07-30', value: 345.13},{date: '2025-07-31', value: 345.13},{date: '2025-08-01', value: 345.13},{date: '2025-08-02', value: 345.13},{date: '2025-08-03', value: 345.13},{date: '2025-08-04', value: 345.13},{date: '2025-08-05', value: 345.13},{date: '2025-08-06', value: 345.13},{date: '2025-08-07', value: 354.95},{date: '2025-08-08', value: 354.95},{date: '2025-08-09', value: 354.95},{date: '2025-08-10', value: 354.95},{date: '2025-08-11', value: 354.95},{date: '2025-08-12', value: 369.27},{date: '2025-08-13', value: 369.27},{date: '2025-08-14', value: 369.27},{date: '2025-08-15', value: 376.73},{date: '2025-08-16', value: 376.73},{date: '2025-08-17', value: 381.83},{date: '2025-08-18', value: 381.83},{date: '2025-08-19', value: 381.83},{date: '2025-08-20', value: 381.83},{date: '2025-08-21', value: 381.83},{date: '2025-08-22', value: 384.22},{date: '2025-08-23', value: 384.22},{date: '2025-08-24', value: 384.22},{date: '2025-08-25', value: 384.22},{date: '2025-08-26', value: 384.22},{date: '2025-08-27', value: 384.22},{date: '2025-08-28', value: 386.67},{date: '2025-08-29', value: 395.45},{date: '2025-08-30', value: 410.09},{date: '2025-08-31', value: 411.93},{date: '2025-09-01', value: 415.24},{date: '2025-09-02', value: 415.24},{date: '2025-09-03', value: 417.70},{date: '2025-09-04', value: 417.70},{date: '2025-09-05', value: 417.70},{date: '2025-09-06', value: 422.70},{date: '2025-09-07', value: 422.70},{date: '2025-09-08', value: 424.61},{date: '2025-09-09', value: 424.61},{date: '2025-09-10', value: 428.53},{date: '2025-09-11', value: 430.93},{date: '2025-09-12', value: 430.93},{date: '2025-09-13', value: 430.93}];
+
+    // Convert the raw sports data into Date objects and assign to sportsData
+    sportsData = sportsDataRaw.map(d => ({ date: new Date(d.date), value: d.value }));
+
+    // Draw a simple line chart on a canvas given a dataset of {date, value}
+    function drawLineChart(canvasId, data) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      // Set canvas dimensions to parent container
+      const parent = canvas.parentElement;
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (!data || data.length === 0) {
+        // draw placeholder text using accent color
+        const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
+        ctx.fillStyle = accentColor.trim();
+        ctx.font = '14px sans-serif';
+        ctx.fillText('No data', 10, canvas.height / 2);
+        return;
+      }
+      const values = data.map(d => d.value);
+      const minVal = Math.min(...values);
+      const maxVal = Math.max(...values);
+      const range = maxVal - minVal || 1;
+      const count = data.length;
+      const xStep = canvas.width / Math.max(count - 1, 1);
+      // Use the accent CSS variable for the line color
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
+      ctx.strokeStyle = accentColor.trim();
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      data.forEach((point, i) => {
+        const x = i * xStep;
+        const y = canvas.height - ((point.value - minVal) / range) * (canvas.height - 20) - 10;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+
+    // Filter data by range (days from most recent)
+    function filterByDays(data, days) {
+      if (!days || days <= 0) return data;
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - days);
+      return data.filter(d => d.date >= cutoff);
+    }
+
+    // Update poker chart with selected range
+    function updatePokerRange(evt) {
+      const days = parseInt(evt.target.getAttribute('data-range'));
+      const filtered = filterByDays(pokerData, days);
+      drawLineChart('pokerChart', filtered);
+    }
+    window.updatePokerRange = updatePokerRange;
+
+    // Update sports chart with selected range
+    function updateSportsRange(evt) {
+      const days = parseInt(evt.target.getAttribute('data-range'));
+      const filtered = filterByDays(sportsData, days);
+      drawLineChart('sportsChart', filtered);
+    }
+    window.updateSportsRange = updateSportsRange;
+
+    // Load Strava totals (placeholder or dynamic) – Provide your own Strava access token if desired
+    async function loadStravaTotals() {
+      const accessToken = null; // Insert your Strava access token here if available
+      if (!accessToken) {
+        // Fallback: placeholder totals
+        document.getElementById('runDistance').textContent = '250';
+        document.getElementById('runCount').textContent = '55';
+        document.getElementById('runTime').textContent = '36';
+        return;
+      }
+      try {
+        const resp = await fetch('https://www.strava.com/api/v3/athlete/activities?per_page=200', { headers: { Authorization: 'Bearer ' + accessToken } });
+        const activities = await resp.json();
+        // Compute totals for each 90-day window
+        const now = new Date();
+        const ninetyDaysMs = 90 * 24 * 60 * 60 * 1000;
+        let maxTotal = { distance: 0, time: 0, count: 0 };
+        for (let i = 0; i < activities.length; i++) {
+          const endWindow = new Date(activities[i].start_date);
+          const startWindow = new Date(endWindow.getTime() - ninetyDaysMs);
+          let totalDist = 0, totalTime = 0, count = 0;
+          activities.forEach(act => {
+            const d = new Date(act.start_date);
+            if (d >= startWindow && d <= endWindow) {
+              totalDist += act.distance || 0;
+              totalTime += act.moving_time || 0;
+              count += 1;
+            }
+          });
+          if (totalDist > maxTotal.distance) {
+            maxTotal = { distance: totalDist, time: totalTime, count: count };
+          }
+        }
+        // Convert meters to miles and seconds to hours
+        document.getElementById('runDistance').textContent = (maxTotal.distance / 1609.34).toFixed(1);
+        document.getElementById('runTime').textContent = (maxTotal.time / 3600).toFixed(1);
+        document.getElementById('runCount').textContent = maxTotal.count;
+      } catch (err) {
+        console.error('Error loading Strava data:', err);
+      }
+    }
+
+    // Initialize everything on load
+    window.addEventListener('DOMContentLoaded', async () => {
+      await loadPokerData();
+      // Draw initial charts with full data
+      drawLineChart('pokerChart', pokerData);
+      drawLineChart('sportsChart', sportsData);
+      // Load Strava totals
+      loadStravaTotals();
+    });
+  </script>
+</body>
+</html>
