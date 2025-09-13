@@ -23,19 +23,22 @@
       <h1 class="font-bold text-xl" style="color: var(--accent)">Arnav Gowda</h1>
       <nav class="space-x-4">
         <a href="index.html#home" class="hover:underline">Home</a>
+        <a href="index.html#about" class="hover:underline">About</a>
+        <a href="index.html#education" class="hover:underline">Education</a>
         <a href="index.html#experience" class="hover:underline">Experience</a>
         <a href="index.html#projects" class="hover:underline">Projects</a>
-        <a href="index.html#contact" class="hover:underline">Contact</a>
+        <a href="index.html#skills" class="hover:underline">Skills</a>
       </nav>
     </div>
   </header>
   <main class="pt-20 px-4 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold mb-4 text-center">Resume</h2>
     <div class="rounded-lg overflow-hidden shadow-lg" style="height: 90vh;">
-      <iframe src="resume/resume.pdf" width="100%" height="100%" frameborder="0" class="w-full h-full"></iframe>
+      <!-- Load the PDF from the repository root rather than a nested folder, since GitHub Pages flattens directories -->
+      <iframe src="resume.pdf" width="100%" height="100%" frameborder="0" class="w-full h-full"></iframe>
     </div>
     <div class="text-center mt-4">
-      <a href="resume/resume.pdf" download class="px-4 py-2 rounded text-white" style="background-color: var(--accent);" onmouseover="this.style.backgroundColor=window.getComputedStyle(document.documentElement).getPropertyValue('--accent-light')" onmouseout="this.style.backgroundColor=window.getComputedStyle(document.documentElement).getPropertyValue('--accent')">Download PDF</a>
+      <a href="resume.pdf" download class="px-4 py-2 rounded text-white" style="background-color: var(--accent);" onmouseover="this.style.backgroundColor=window.getComputedStyle(document.documentElement).getPropertyValue('--accent-light')" onmouseout="this.style.backgroundColor=window.getComputedStyle(document.documentElement).getPropertyValue('--accent')">Download PDF</a>
     </div>
   </main>
 </body>

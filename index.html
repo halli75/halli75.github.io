@@ -50,7 +50,7 @@
         <a href="#projects" class="hover:text-accent-light transition-colors">Projects</a>
         <a href="#skills" class="hover:text-accent-light transition-colors">Skills</a>
         <a href="resume.html" class="hover:text-accent-light transition-colors">Resume</a>
-        <a href="#contact" class="hover:text-accent-light transition-colors">Contact</a>
+        <!-- Contact link removed -->
       </nav>
       <!-- Mobile menu button -->
       <button id="menuBtn" class="md:hidden text-accent-DEFAULT focus:outline-none">
@@ -70,77 +70,154 @@
       <a href="#projects" class="block" onclick="toggleMenu()">Projects</a>
       <a href="#skills" class="block" onclick="toggleMenu()">Skills</a>
       <a href="resume.html" class="block">Resume</a>
-      <a href="#contact" class="block" onclick="toggleMenu()">Contact</a>
+      <!-- Contact link removed -->
     </div>
   </header>
 
   <!-- Main content -->
   <main class="pt-24 max-w-6xl mx-auto px-4 space-y-32">
     <!-- Home Section -->
-    <section id="home" class="flex flex-col items-center text-center space-y-6">
-      <h2 class="text-4xl font-extrabold">Hello, I'm <span class="text-accent-DEFAULT">Arnav Gowda</span></h2>
-      <p class="max-w-2xl text-lg leading-relaxed">I'm a computer science student specializing in machine learning and applied mathematics. I build scalable applications, explore probabilistic decision making, and love pushing my limits—whether on the track or at the poker table.</p>
-      <div class="flex space-x-4 mt-4">
-        <a href="#about" class="px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Learn More</a>
-        <a href="resume.html" class="px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors">View Resume</a>
+    <section id="home" class="pt-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <!-- Hero text -->
+        <div class="space-y-4">
+          <!-- Primary headline summarising my majors and focus area -->
+          <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            CS&nbsp;&amp;&nbsp;Mathematics&nbsp;|&nbsp;Quantitative Research
+          </h2>
+          <!-- Three concise bullets highlighting my studies, research and interests.
+               Recruiters can quickly scan these lines to understand my academic focus,
+               current research directions and the types of projects I build. -->
+          <ul class="space-y-1 text-base md:text-lg list-disc pl-5">
+            <li>Junior at the University of Maryland (Class&nbsp;of&nbsp;2025) studying CS &amp; Data Science</li>
+            <li>Researching topological data analysis &amp; geometric deep learning to detect regime shifts in high‑frequency financial markets</li>
+            <li>Building scalable systems in quantitative finance, logistics optimisation &amp; AI‑driven games</li>
+          </ul>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <!-- Call-to-action buttons: Projects, GitHub and LinkedIn.  The projects button scrolls to the projects section. -->
+            <a href="https://github.com/halli75" target="_blank" class="px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/arnav-gowda-86b835217/" target="_blank" class="px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors">LinkedIn</a>
+          </div>
+        </div>
+        <!-- Snapshot card -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <h3 class="font-semibold text-lg">Snapshot</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">TDA</span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Geometric DL</span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Full‑stack</span>
+          </div>
+          <p class="text-sm leading-relaxed">Building scalable systems and exploring probabilistic decision‑making across finance, sports, and games. Focused on geometry‑aware ML and quantitative research.</p>
+          <a href="resume.html" class="inline-block px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="space-y-16">
       <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-      <!-- Running -->
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Distance Running</h3>
-          <p class="mb-4">Running teaches me resilience and discipline. I compete in track and road races, continually striving to set new personal bests.</p>
-          <ul class="list-disc list-inside space-y-1 text-sm">
-            <li>Mile PR: <strong>4:44.88</strong> at Outdoor Track & Field Championships</li>
-            <li>3200m PR: <strong>10:16.53</strong> at East Region Championships</li>
-            <li>5K PR: <strong>16:44.96</strong> at Zaching for Cancer Running Festival</li>
-            <li>Half Marathon PR: <strong>1:24:01</strong> at Philadelphia Half Marathon</li>
-          </ul>
-          <div class="mt-4 p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
-            <h4 class="font-semibold mb-2">Recent 90-Day Totals</h4>
-            <p><span id="runDistance" class="font-bold text-accent-DEFAULT">—</span> miles run</p>
-            <p><span id="runCount" class="font-bold text-accent-DEFAULT">—</span> runs</p>
-            <p><span id="runTime" class="font-bold text-accent-DEFAULT">—</span> hours</p>
-            <small class="text-xs text-gray-600 dark:text-gray-400">Computed from Strava data</small>
+      <!-- Overview -->
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
+        <h3 class="text-2xl font-semibold mb-3 text-accent-DEFAULT">Overview</h3>
+        <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
+          <li>Studying Computer Science &amp; Data Science at the University of Maryland (Class&nbsp;of&nbsp;2025)</li>
+          <li>Researching topological data analysis &amp; geometric deep learning to detect regime shifts in high‑frequency financial markets</li>
+          <li>Currently building scalable systems in quantitative finance, logistics optimisation &amp; AI‑driven games</li>
+        </ul>
+      </div>
+      <!-- Interests box -->
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
+        <h3 class="font-semibold mb-2 flex items-center">
+          <span data-lucide="brain" class="w-5 h-5 mr-2"></span> Interests
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Running</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Poker</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Sports Betting</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Game Theory</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Chess</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">French</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Track &amp; Field</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Triathlon</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Skiing</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Sports Science</span>
+        </div>
+      </div>
+
+      <!-- Running & Training card -->
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-6">
+        <h3 class="text-2xl font-semibold text-accent-DEFAULT mb-1">Running &amp; Training</h3>
+        <p class="text-sm mb-2">Running teaches me resilience and discipline. I compete in track and road races, continually striving to set new personal bests.</p>
+        <ul class="list-disc list-inside space-y-1 text-sm mb-4">
+          <li>Mile PR: <strong>4:44.88</strong> at Outdoor Track &amp; Field Championships</li>
+          <li>3200m PR: <strong>10:16.53</strong> at East Region Championships</li>
+          <li>5K PR: <strong>16:44.96</strong> at Zaching for Cancer Running Festival</li>
+          <li>Half Marathon PR: <strong>1:24:01</strong> at Philadelphia Half Marathon</li>
+        </ul>
+        <div class="grid md:grid-cols-2 gap-4">
+          <!-- Monthly summary -->
+          <div class="p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-semibold">Peak&nbsp;90‑Day&nbsp;Training</h4>
+              <!-- Activity filter buttons -->
+              <div class="flex gap-2">
+                <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="all" onclick="setActivityFilter(event)">All</button>
+                <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="Run" onclick="setActivityFilter(event)">Running</button>
+                <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="Ride" onclick="setActivityFilter(event)">Biking</button>
+                <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="Swim" onclick="setActivityFilter(event)">Swimming</button>
+              </div>
+            </div>
+            <p class="text-sm"><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> km total distance</p>
+            <p class="text-sm"><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours</p>
+            <p class="text-sm"><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> activities</p>
+            <p class="text-sm">Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> km</p>
+          </div>
+          <!-- Weekly bar chart -->
+          <div class="p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2">
+            <h4 class="font-semibold mb-2">Weekly Training</h4>
+            <div class="w-full h-32">
+              <canvas id="weeklyChart"></canvas>
+            </div>
+            <p class="text-xs mt-1">Best distance week: <span id="bestDistanceWeek" class="font-bold text-accent-DEFAULT">0</span> km</p>
           </div>
         </div>
-        <!-- Poker and Sports Cards side by side on desktop -->
-        <div class="space-y-8">
-          <!-- Poker -->
-          <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
-            <h3 class="text-xl font-semibold mb-2 text-accent-DEFAULT">Poker</h3>
-            <p class="mb-2 text-sm">I apply game theory and statistics to gain an edge at the tables. My EV curve reflects disciplined bankroll management and optimal decision making.</p>
-            <div class="w-full h-56">
-              <canvas id="pokerChart"></canvas>
-            </div>
-            <div class="flex justify-center space-x-2 mt-2 text-sm">
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updatePokerRange(event)">1M</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updatePokerRange(event)">3M</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updatePokerRange(event)">1Y</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updatePokerRange(event)">All</button>
-            </div>
-            <small class="text-xs text-gray-600 dark:text-gray-400">Data pulled from my published Google Sheet</small>
-          </div>
-          <!-- Sports betting -->
-          <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
-            <h3 class="text-xl font-semibold mb-2 text-accent-DEFAULT">Plus‑EV Sports Betting</h3>
-            <p class="mb-2 text-sm">I identify value bets using quantitative models and strict bankroll rules. Occasional downswings are part of the journey; the long-term edge prevails.</p>
-            <div class="w-full h-56">
-              <canvas id="sportsChart"></canvas>
-            </div>
-            <div class="flex justify-center space-x-2 mt-2 text-sm">
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updateSportsRange(event)">1M</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updateSportsRange(event)">3M</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updateSportsRange(event)">1Y</button>
-              <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updateSportsRange(event)">All</button>
-            </div>
-            <small class="text-xs text-gray-600 dark:text-gray-400">Synthetic data (7% EV per bet, realistic swings)</small>
-          </div>
+        <!-- Recent activities list -->
+        <div class="p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2 overflow-y-auto h-40">
+          <h4 class="font-semibold mb-2">Recent Activities</h4>
+          <ul id="recentActivities" class="space-y-1 text-sm"></ul>
         </div>
+      </div>
+
+      <!-- Poker card -->
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
+        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Poker</h3>
+        <p class="mb-2 text-sm">I apply game theory and statistics to gain an edge at the tables. My EV curve reflects disciplined bankroll management and optimal decision making.</p>
+        <div class="w-full h-56">
+          <canvas id="pokerChart"></canvas>
+        </div>
+        <div class="flex justify-center space-x-2 mt-2 text-sm">
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updatePokerRange(event)">1M</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updatePokerRange(event)">3M</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updatePokerRange(event)">1Y</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updatePokerRange(event)">All</button>
+        </div>
+        <small class="text-xs text-gray-600 dark:text-gray-400">Data pulled from my published Google Sheet</small>
+      </div>
+
+      <!-- Plus-EV Sports betting card -->
+      <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
+        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Plus‑EV Sports Betting</h3>
+        <p class="mb-2 text-sm">I identify value bets using quantitative models and strict bankroll rules. Occasional downswings are part of the journey; the long‑term edge prevails.</p>
+        <div class="w-full h-56">
+          <canvas id="sportsChart"></canvas>
+        </div>
+        <div class="flex justify-center space-x-2 mt-2 text-sm">
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="30" onclick="updateSportsRange(event)">1M</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="90" onclick="updateSportsRange(event)">3M</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="365" onclick="updateSportsRange(event)">1Y</button>
+          <button class="p-1 px-2 border rounded hover:bg-accent-DEFAULT hover:text-white" data-range="0" onclick="updateSportsRange(event)">All</button>
+        </div>
+        <small class="text-xs text-gray-600 dark:text-gray-400">Synthetic data (7% EV per bet, realistic swings)</small>
       </div>
     </section>
 
@@ -348,16 +425,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="space-y-6">
-      <h2 class="text-3xl font-bold text-center mb-6">Contact</h2>
-      <p class="text-center">Feel free to connect with me on GitHub. My email and phone number are available on my résumé.</p>
-      <div class="flex justify-center space-x-6">
-        <a href="https://github.com/halli75" target="_blank" class="flex items-center space-x-1 text-accent-DEFAULT hover:underline">
-          <span>GitHub</span>
-        </a>
-      </div>
-      <p class="text-center text-xs text-gray-600 dark:text-gray-400 mt-4">© 2025 Arnav Gowda. Built with love and Tailwind CSS.</p>
-    </section>
+    <!-- Contact section removed by user request -->
   </main>
 
   <!-- Scripts -->
@@ -397,9 +465,11 @@
     }
     menuBtn.addEventListener('click', toggleMenu);
 
-    // Data arrays for charts
+    // Data arrays for charts and activities
     let pokerData = [];
     let sportsData = [];
+    let activities = [];
+    let currentActivityFilter = 'all';
 
     // Fetch poker CSV from published Google Sheet and parse
     async function loadPokerData() {
@@ -497,56 +567,258 @@
     }
     window.updateSportsRange = updateSportsRange;
 
-    // Load Strava totals (placeholder or dynamic) – Provide your own Strava access token if desired
-    async function loadStravaTotals() {
-      const accessToken = null; // Insert your Strava access token here if available
-      if (!accessToken) {
-        // Fallback: placeholder totals
-        document.getElementById('runDistance').textContent = '250';
-        document.getElementById('runCount').textContent = '55';
-        document.getElementById('runTime').textContent = '36';
-        return;
+    /*
+     * Parse activities CSV and compute running/training statistics.
+     * The CSV is loaded from a file hosted with the site (activities.csv).
+     * Each activity includes fields: Activity Date, Activity Type, Elapsed Time (seconds), Distance (km).
+     */
+    // Split a CSV row by comma, handling quoted fields
+    function splitCSVRow(row) {
+      const result = [];
+      let inQuotes = false;
+      let value = '';
+      for (let i = 0; i < row.length; i++) {
+        const ch = row[i];
+        if (ch === '"') {
+          inQuotes = !inQuotes;
+        } else if (ch === ',' && !inQuotes) {
+          result.push(value);
+          value = '';
+        } else {
+          value += ch;
+        }
       }
+      result.push(value);
+      return result;
+    }
+
+    // Load activities from CSV
+    async function loadActivities() {
       try {
-        const resp = await fetch('https://www.strava.com/api/v3/athlete/activities?per_page=200', { headers: { Authorization: 'Bearer ' + accessToken } });
-        const activities = await resp.json();
-        // Compute totals for each 90-day window
-        const now = new Date();
-        const ninetyDaysMs = 90 * 24 * 60 * 60 * 1000;
-        let maxTotal = { distance: 0, time: 0, count: 0 };
-        for (let i = 0; i < activities.length; i++) {
-          const endWindow = new Date(activities[i].start_date);
-          const startWindow = new Date(endWindow.getTime() - ninetyDaysMs);
-          let totalDist = 0, totalTime = 0, count = 0;
-          activities.forEach(act => {
-            const d = new Date(act.start_date);
-            if (d >= startWindow && d <= endWindow) {
-              totalDist += act.distance || 0;
-              totalTime += act.moving_time || 0;
-              count += 1;
+        const resp = await fetch('activities.csv');
+        const text = await resp.text();
+        const rows = text.trim().split(/\r?\n/);
+        if (rows.length <= 1) return;
+        const header = splitCSVRow(rows[0]);
+        // The Strava export includes two sets of elapsed time and distance columns; we
+        // explicitly pick the "Moving Time" (seconds) and the second "Distance" (meters)
+        // so that our statistics reflect actual moving activity. We convert meters to km.
+        const dateIdx = header.indexOf('Activity Date');
+        const typeIdx = header.indexOf('Activity Type');
+        const movingIdx = header.indexOf('Moving Time');
+        let distIdx = -1;
+        // Find the second occurrence of "Distance" in the header (the first is index 6,
+        // the second is index 17) to ensure we select the value in meters.
+        let count = 0;
+        for (let i = 0; i < header.length; i++) {
+          if (header[i] === 'Distance') {
+            count++;
+            if (count === 2) {
+              distIdx = i;
+              break;
             }
-          });
-          if (totalDist > maxTotal.distance) {
-            maxTotal = { distance: totalDist, time: totalTime, count: count };
           }
         }
-        // Convert meters to miles and seconds to hours
-        document.getElementById('runDistance').textContent = (maxTotal.distance / 1609.34).toFixed(1);
-        document.getElementById('runTime').textContent = (maxTotal.time / 3600).toFixed(1);
-        document.getElementById('runCount').textContent = maxTotal.count;
+        activities = [];
+        for (let i = 1; i < rows.length; i++) {
+          const cols = splitCSVRow(rows[i]);
+          let dateStr = cols[dateIdx] || '';
+          // Remove quotes and trim whitespace
+          dateStr = dateStr.replace(/"/g, '').trim();
+          const type = (cols[typeIdx] || '').replace(/"/g, '').trim();
+          const movingSec = parseFloat(cols[movingIdx] || 0);
+          const distMeters = parseFloat(cols[distIdx] || 0);
+          if (!dateStr) continue;
+          const date = new Date(dateStr);
+          const distance = isNaN(distMeters) ? 0 : distMeters / 1000.0;
+          const elapsed = isNaN(movingSec) ? 0 : movingSec;
+          activities.push({ date, type, elapsed, distance });
+        }
       } catch (err) {
-        console.error('Error loading Strava data:', err);
+        console.error('Error loading activities:', err);
       }
+    }
+
+    // Set activity filter and update stats
+    function setActivityFilter(evt) {
+      currentActivityFilter = evt.target.getAttribute('data-filter');
+      updateTrainingStats();
+    }
+    window.setActivityFilter = setActivityFilter;
+
+    // Compute monthly stats (last 30 days) based on filter
+    function computeMonthlyStats() {
+      const now = new Date();
+      const cutoff = new Date(now.getTime());
+      cutoff.setDate(cutoff.getDate() - 30);
+      let totalDist = 0;
+      let totalHours = 0;
+      let count = 0;
+      let longest = 0;
+      activities.forEach(act => {
+        if (act.date >= cutoff && (currentActivityFilter === 'all' || act.type === currentActivityFilter)) {
+          totalDist += act.distance;
+          totalHours += act.elapsed / 3600;
+          count += 1;
+          if (act.distance > longest) longest = act.distance;
+        }
+      });
+      return { distance: totalDist, hours: totalHours, count: count, longest: longest };
+    }
+
+    // Compute the most active 90‑day period.
+    // This function slides a 90‑day window across the filtered activities and finds
+    // the window with the greatest total distance. It returns aggregated statistics
+    // for that window: total distance, total hours, number of activities and longest run.
+    function computePeak90Stats() {
+      // Filter activities by the current type
+      const filtered = activities
+        .filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter)
+        .sort((a, b) => a.date - b.date);
+      if (filtered.length === 0) {
+        return { distance: 0, hours: 0, count: 0, longest: 0 };
+      }
+      let best = { distance: 0, hours: 0, count: 0, longest: 0 };
+      const ninetyMs = 90 * 24 * 60 * 60 * 1000;
+      for (let i = 0; i < filtered.length; i++) {
+        let totalDist = 0;
+        let totalHours = 0;
+        let count = 0;
+        let longest = 0;
+        const startDate = filtered[i].date;
+        for (let j = i; j < filtered.length; j++) {
+          const diff = filtered[j].date - startDate;
+          if (diff <= ninetyMs) {
+            totalDist += filtered[j].distance;
+            totalHours += filtered[j].elapsed / 3600;
+            count++;
+            if (filtered[j].distance > longest) longest = filtered[j].distance;
+          } else {
+            break;
+          }
+        }
+        if (totalDist > best.distance) {
+          best = { distance: totalDist, hours: totalHours, count: count, longest: longest };
+        }
+      }
+      return best;
+    }
+
+    // Compute weekly stats for last 8 weeks
+    function computeWeeklyStats() {
+      const weeks = {};
+      activities.forEach(act => {
+        const date = act.date;
+        const weekStart = new Date(date);
+        const day = weekStart.getDay();
+        const diff = (day + 6) % 7;
+        weekStart.setDate(weekStart.getDate() - diff);
+        weekStart.setHours(0, 0, 0, 0);
+        const key = weekStart.toISOString().split('T')[0];
+        if (!weeks[key]) {
+          weeks[key] = { distance: 0, hours: 0 };
+        }
+        if (currentActivityFilter === 'all' || act.type === currentActivityFilter) {
+          weeks[key].distance += act.distance;
+          weeks[key].hours += act.elapsed / 3600;
+        }
+      });
+      const entries = Object.entries(weeks).map(([k, v]) => ({ week: k, distance: v.distance, hours: v.hours }));
+      entries.sort((a, b) => new Date(a.week) - new Date(b.week));
+      return entries.slice(-8);
+    }
+
+    // Draw bar chart for weekly distances
+    function drawBarChart(canvasId, data) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      const parent = canvas.parentElement;
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (!data || data.length === 0) {
+        const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
+        ctx.fillStyle = accentColor.trim();
+        ctx.font = '14px sans-serif';
+        ctx.fillText('No data', 10, canvas.height / 2);
+        return;
+      }
+      const maxVal = Math.max(...data.map(d => d.distance));
+      const barWidth = canvas.width / data.length;
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
+      ctx.fillStyle = accentColor.trim();
+      data.forEach((item, i) => {
+        const x = i * barWidth + barWidth * 0.1;
+        const y = canvas.height - ((item.distance / (maxVal || 1)) * (canvas.height - 20)) - 10;
+        const h = canvas.height - y - 10;
+        const w = barWidth * 0.8;
+        ctx.fillRect(x, y, w, h);
+      });
+    }
+
+    // Render recent activities
+    function renderRecentActivities() {
+      const listEl = document.getElementById('recentActivities');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+      const filtered = activities.filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter);
+      filtered.sort((a, b) => b.date - a.date);
+      const now = new Date();
+      filtered.slice(0, 5).forEach(act => {
+        const li = document.createElement('li');
+        li.className = 'flex justify-between';
+        const km = act.distance;
+        const mins = Math.round(act.elapsed / 60);
+        const diffDays = Math.floor((now - act.date) / (1000 * 3600 * 24));
+        let rel = '';
+        if (diffDays >= 365) {
+          rel = Math.floor(diffDays / 365) + 'y';
+        } else if (diffDays >= 30) {
+          rel = Math.floor(diffDays / 30) + 'm';
+        } else if (diffDays >= 7) {
+          rel = Math.floor(diffDays / 7) + 'w';
+        } else {
+          rel = diffDays + 'd';
+        }
+        li.innerHTML = `<span>${act.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})} – ${mins} mins – ${km.toFixed(1)} km</span><span class="text-gray-500 dark:text-gray-400">${rel}</span>`;
+        listEl.appendChild(li);
+      });
+    }
+
+    // Update training stats and charts
+    function updateTrainingStats() {
+      // Use the most active 90‑day window rather than a simple last‑30‑days summary.
+      const m = computePeak90Stats();
+      const distEl = document.getElementById('monthlyDistance');
+      const hrsEl = document.getElementById('monthlyHours');
+      const cntEl = document.getElementById('monthlyActivities');
+      const longEl = document.getElementById('monthlyLongest');
+      if (distEl) distEl.textContent = m.distance.toFixed(1);
+      if (hrsEl) hrsEl.textContent = m.hours.toFixed(1);
+      if (cntEl) cntEl.textContent = m.count;
+      if (longEl) longEl.textContent = m.longest.toFixed(1);
+      const weekly = computeWeeklyStats();
+      drawBarChart('weeklyChart', weekly);
+      let best = 0;
+      weekly.forEach(w => { if (w.distance > best) best = w.distance; });
+      const bestEl = document.getElementById('bestDistanceWeek');
+      if (bestEl) bestEl.textContent = best.toFixed(1);
+      renderRecentActivities();
     }
 
     // Initialize everything on load
     window.addEventListener('DOMContentLoaded', async () => {
+      // Load poker data and draw charts
       await loadPokerData();
-      // Draw initial charts with full data
       drawLineChart('pokerChart', pokerData);
       drawLineChart('sportsChart', sportsData);
-      // Load Strava totals
-      loadStravaTotals();
+      // Load running activities and compute training stats
+      await loadActivities();
+      updateTrainingStats();
+      // Render lucide icons in the interests card
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
     });
   </script>
 </body>
