@@ -31,7 +31,8 @@
         --accent-dark: #1e40af;
       }
     </style>
-  <link rel="icon" href="/assets/umd.png" />
+  <!-- Use root-level UMD logo for favicon on GitHub Pages -->
+  <link rel="icon" href="/umd.png" />
   <!-- We draw our own lightweight charts; no external chart library required -->
   <!-- Simple Markdown Icons (Lucide) -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -164,8 +165,8 @@
         <!-- Ivoyant experience -->
         <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
-            <!-- Placeholder for Ivoyant logo (text-based due to download restrictions) -->
-            <div class="w-16 h-16 rounded-full bg-accent-DEFAULT text-white flex items-center justify-center text-xl font-bold">I</div>
+            <!-- Official Ivoyant logo using SVG downloaded from their site. If this image fails to load, it will degrade gracefully due to the defined dimensions. -->
+            <img src="ivoyant.svg" alt="Ivoyant Logo" class="w-16 h-16 object-contain rounded" />
           </div>
           <div>
             <h3 class="text-xl font-semibold">Software Engineering Intern – Ivoyant</h3>
@@ -180,7 +181,8 @@
         <!-- UMD experience -->
         <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
-            <img src="assets/umd.png" alt="UMD Logo" class="w-16 h-16 object-contain rounded" />
+            <!-- UMD logo resides at the repository root (GitHub Pages flattens directories) -->
+            <img src="umd.png" alt="UMD Logo" class="w-16 h-16 object-contain rounded" />
           </div>
           <div>
             <h3 class="text-xl font-semibold">AI Research Intern – University of Maryland</h3>
@@ -274,7 +276,8 @@
               <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Finance</span>
             </div>
           </div>
-          <a href="research/paper1.pdf" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light" target="_blank">View PDF</a>
+            <!-- Link directly to the research paper in the repository root since GitHub Pages flattens directory structures -->
+            <a href="paper1.pdf" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light" target="_blank">View PDF</a>
         </div>
         <!-- AssetScanner Project -->
         <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
