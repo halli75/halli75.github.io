@@ -131,23 +131,27 @@
           <span data-lucide="brain" class="w-5 h-5 mr-2"></span> Interests
         </h3>
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Running</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Poker</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Sports Betting</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Game Theory</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Chess</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">French</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Track &amp; Field</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Triathlon</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Skiing</span>
-          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Sports Science</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🏃 Running</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">♠️ Poker</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">💰 Sports&nbsp;Betting</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🧠 Game&nbsp;Theory</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">♟️ Chess</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🇫🇷 French</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🏃‍♂️ Track&nbsp;&amp;&nbsp;Field</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🏊 Triathlon</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">⛷️ Skiing</span>
+          <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">🔬 Sports&nbsp;Science</span>
         </div>
       </div>
 
       <!-- Running & Training card -->
       <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-6">
-        <h3 class="text-2xl font-semibold text-accent-DEFAULT mb-1">Running &amp; Training</h3>
-        <p class="text-sm mb-2">Running teaches me resilience and discipline. I compete in track and road races, continually striving to set new personal bests.</p>
+        <!-- Added emoji for a playful heading -->
+        <h3 class="text-2xl font-semibold text-accent-DEFAULT mb-1 flex items-center"><span class="mr-2">🏃</span>Running &amp; Training</h3>
+        <!-- More personal description inviting the reader into my running journey -->
+        <p class="text-sm mb-2">As a competitive runner, each mile tells a story. Here's a look at my most recent sessions.</p>
+        <!-- Decorative illustration for visual interest -->
+        <img src="run_art.png" alt="Running illustration" class="w-full h-32 object-cover rounded-lg mb-4" />
         <ul class="list-disc list-inside space-y-1 text-sm mb-4">
           <li>Mile PR: <strong>4:44.88</strong> at Outdoor Track &amp; Field Championships</li>
           <li>3200m PR: <strong>10:16.53</strong> at East Region Championships</li>
@@ -158,7 +162,7 @@
           <!-- Monthly summary -->
           <div class="p-4 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2">
             <div class="flex justify-between items-center mb-2">
-              <h4 class="font-semibold">Peak&nbsp;90‑Day&nbsp;Training</h4>
+              <h4 class="font-semibold">Last&nbsp;30&nbsp;Activities</h4>
               <!-- Activity filter buttons -->
               <div class="flex gap-2">
                 <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="all" onclick="setActivityFilter(event)">All</button>
@@ -168,8 +172,8 @@
               </div>
             </div>
             <p class="text-sm"><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> km total distance</p>
-            <p class="text-sm"><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours</p>
-            <p class="text-sm"><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> activities</p>
+            <p class="text-sm"><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours of movement</p>
+            <p class="text-sm"><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> sessions</p>
             <p class="text-sm">Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> km</p>
           </div>
           <!-- Weekly bar chart -->
@@ -190,8 +194,10 @@
 
       <!-- Poker card -->
       <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
-        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Poker</h3>
-        <p class="mb-2 text-sm">I apply game theory and statistics to gain an edge at the tables. My EV curve reflects disciplined bankroll management and optimal decision making.</p>
+        <!-- Add card suit emoji for flair -->
+        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT flex items-center"><span class="mr-2">♠️</span>Poker</h3>
+        <!-- Improved caption telling a richer story without adding length -->
+        <p class="mb-2 text-sm">My EV curve charts the grind: disciplined decision‑making and bankroll management create steady gains despite variance.</p>
         <div class="w-full h-56">
           <canvas id="pokerChart"></canvas>
         </div>
@@ -206,8 +212,9 @@
 
       <!-- Plus-EV Sports betting card -->
       <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
-        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT">Plus‑EV Sports Betting</h3>
-        <p class="mb-2 text-sm">I identify value bets using quantitative models and strict bankroll rules. Occasional downswings are part of the journey; the long‑term edge prevails.</p>
+        <h3 class="text-2xl font-semibold mb-2 text-accent-DEFAULT flex items-center"><span class="mr-2">📈</span>Plus‑EV&nbsp;Sports&nbsp;Betting</h3>
+        <!-- Revised caption: emphasise the interplay of data and discipline -->
+        <p class="mb-2 text-sm">Data‑driven models and cold discipline underpin my sports bets. Dips are part of the climb toward long‑term edge.</p>
         <div class="w-full h-56">
           <canvas id="sportsChart"></canvas>
         </div>
@@ -529,18 +536,46 @@
       const range = maxVal - minVal || 1;
       const count = data.length;
       const xStep = canvas.width / Math.max(count - 1, 1);
-      // Use the accent CSS variable for the line color
-      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
-      ctx.strokeStyle = accentColor.trim();
+      // Fetch accent colors from CSS variables
+      const accentColor = (getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb').trim();
+      const accentLight = (getComputedStyle(document.documentElement).getPropertyValue('--accent-light') || accentColor).trim();
       ctx.lineWidth = 2;
       ctx.beginPath();
+      const points = [];
       data.forEach((point, i) => {
         const x = i * xStep;
         const y = canvas.height - ((point.value - minVal) / range) * (canvas.height - 20) - 10;
+        points.push({ x, y });
         if (i === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       });
+      // Fill area under the line with a gradient for a softer look
+      ctx.save();
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      // start with a semi‑transparent accent light colour and fade to nearly transparent
+      gradient.addColorStop(0, accentLight + '55');
+      gradient.addColorStop(1, accentLight + '05');
+      ctx.lineTo(canvas.width, canvas.height);
+      ctx.lineTo(0, canvas.height);
+      ctx.closePath();
+      ctx.fillStyle = gradient;
+      ctx.fill();
+      ctx.restore();
+      // Draw the line itself on top
+      ctx.beginPath();
+      points.forEach((pt, i) => {
+        if (i === 0) ctx.moveTo(pt.x, pt.y);
+        else ctx.lineTo(pt.x, pt.y);
+      });
+      ctx.strokeStyle = accentColor;
       ctx.stroke();
+      // Draw small circles at each data point to make the chart more engaging
+      ctx.fillStyle = accentColor;
+      points.forEach(pt => {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 3, 0, 2 * Math.PI);
+        ctx.fill();
+      });
     }
 
     // Filter data by range (days from most recent)
@@ -678,6 +713,55 @@
       if (filtered.length === 0) {
         return { distance: 0, hours: 0, count: 0, longest: 0 };
       }
+
+    // Get the most recent N activities based on date and current filter.
+    function getRecentActivities(n) {
+      // Filter activities by current activity type
+      const filtered = activities
+        .filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter)
+        .sort((a, b) => b.date - a.date);
+      return filtered.slice(0, n);
+    }
+
+    // Compute statistics for the last N activities. Defaults to 30.
+    function computeRecentStats(n = 30) {
+      const recent = getRecentActivities(n);
+      let totalDist = 0;
+      let totalHours = 0;
+      let longest = 0;
+      recent.forEach(act => {
+        totalDist += act.distance;
+        totalHours += act.elapsed / 3600;
+        if (act.distance > longest) longest = act.distance;
+      });
+      return { distance: totalDist, hours: totalHours, count: recent.length, longest: longest };
+    }
+
+    // Compute weekly statistics for the most recent N activities. Defaults to 30.
+    function computeWeeklyStatsRecent(n = 30) {
+      const recent = getRecentActivities(n);
+      const weeks = {};
+      recent.forEach(act => {
+        const date = act.date;
+        // Determine the Monday (or same-day-of-week) start of the week
+        const weekStart = new Date(date);
+        const day = weekStart.getDay();
+        const diff = (day + 6) % 7;
+        weekStart.setDate(weekStart.getDate() - diff);
+        weekStart.setHours(0, 0, 0, 0);
+        const key = weekStart.toISOString().split('T')[0];
+        if (!weeks[key]) {
+          weeks[key] = { distance: 0, hours: 0 };
+        }
+        weeks[key].distance += act.distance;
+        weeks[key].hours += act.elapsed / 3600;
+      });
+      // Transform into sorted array of weeks
+      const entries = Object.entries(weeks).map(([k, v]) => ({ week: k, distance: v.distance, hours: v.hours }));
+      entries.sort((a, b) => new Date(a.week) - new Date(b.week));
+      // Keep the last 6 weeks for a cleaner chart
+      return entries.slice(-6);
+    }
       let best = { distance: 0, hours: 0, count: 0, longest: 0 };
       const ninetyMs = 90 * 24 * 60 * 60 * 1000;
       for (let i = 0; i < filtered.length; i++) {
@@ -733,8 +817,14 @@
       const canvas = document.getElementById(canvasId);
       const ctx = canvas.getContext('2d');
       const parent = canvas.parentElement;
-      canvas.width = parent.clientWidth;
-      canvas.height = parent.clientHeight;
+      // Determine canvas dimensions. If the parent has no explicit height
+      // (which can happen when rendering on GitHub Pages), fall back to
+      // sensible defaults so the chart still appears. Without this, the
+      // canvas height may be zero, resulting in no visible bars.
+      const width = parent && parent.clientWidth ? parent.clientWidth : 300;
+      const height = parent && parent.clientHeight ? parent.clientHeight : 150;
+      canvas.width = width;
+      canvas.height = height;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       if (!data || data.length === 0) {
         const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
@@ -745,13 +835,21 @@
       }
       const maxVal = Math.max(...data.map(d => d.distance));
       const barWidth = canvas.width / data.length;
-      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb';
-      ctx.fillStyle = accentColor.trim();
+      const accent = (getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#2563eb').trim();
+      const accentLight = (getComputedStyle(document.documentElement).getPropertyValue('--accent-light') || accent).trim();
       data.forEach((item, i) => {
+        const ratio = data.length > 1 ? i / (data.length - 1) : 0;
+        // Compute alpha gradient from 0.5 to 0.9
+        const alpha = 0.5 + 0.4 * ratio;
+        // Build an 8-digit hex code with alpha channel. Remove '#' and append alpha as two hex digits.
+        let hex = accentLight.replace('#','');
+        const a = Math.round(alpha * 255).toString(16).padStart(2, '0');
+        const fillColor = '#' + hex + a;
         const x = i * barWidth + barWidth * 0.1;
         const y = canvas.height - ((item.distance / (maxVal || 1)) * (canvas.height - 20)) - 10;
         const h = canvas.height - y - 10;
         const w = barWidth * 0.8;
+        ctx.fillStyle = fillColor;
         ctx.fillRect(x, y, w, h);
       });
     }
@@ -761,8 +859,8 @@
       const listEl = document.getElementById('recentActivities');
       if (!listEl) return;
       listEl.innerHTML = '';
-      const filtered = activities.filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter);
-      filtered.sort((a, b) => b.date - a.date);
+      // Only use the most recent 30 activities for the recent list as well
+      const filtered = getRecentActivities(30);
       const now = new Date();
       filtered.slice(0, 5).forEach(act => {
         const li = document.createElement('li');
@@ -787,8 +885,8 @@
 
     // Update training stats and charts
     function updateTrainingStats() {
-      // Use the most active 90‑day window rather than a simple last‑30‑days summary.
-      const m = computePeak90Stats();
+      // Use the most recent 30 activities instead of a sliding 90‑day window.
+      const m = computeRecentStats(30);
       const distEl = document.getElementById('monthlyDistance');
       const hrsEl = document.getElementById('monthlyHours');
       const cntEl = document.getElementById('monthlyActivities');
@@ -797,7 +895,7 @@
       if (hrsEl) hrsEl.textContent = m.hours.toFixed(1);
       if (cntEl) cntEl.textContent = m.count;
       if (longEl) longEl.textContent = m.longest.toFixed(1);
-      const weekly = computeWeeklyStats();
+      const weekly = computeWeeklyStatsRecent(30);
       drawBarChart('weeklyChart', weekly);
       let best = 0;
       weekly.forEach(w => { if (w.distance > best) best = w.distance; });
