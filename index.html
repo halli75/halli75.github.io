@@ -100,18 +100,26 @@
           </div>
         </div>
         <!-- Snapshot card rewritten with a decorative illustration and richer description -->
-        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
-          <!-- A subtle illustration conveys quantitative research and data science themes -->
+        <div class="p-6 rounded-lg shadow-md bg-gradient-to-br from-accent-DEFAULT/10 via-accent-DEFAULT/5 to-accent-DEFAULT/0 dark:from-accent-dark/20 dark:via-accent-dark/10 dark:to-accent-dark/0">
+          <!-- Optional illustration remains for visual interest -->
           <img src="abstract_art.png" alt="Abstract geometric illustration" class="w-full h-24 object-cover rounded-lg mb-3" />
           <h3 class="text-xl font-semibold mb-2">Snapshot</h3>
-          <!-- Colourful badges with icons summarise my core domains -->
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="activity" class="w-4 h-4"></span>TDA</span>
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="layers" class="w-4 h-4"></span>Geom&nbsp;DL</span>
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="terminal" class="w-4 h-4"></span>Full‑stack</span>
+          <!-- A concise tagline describing my mission -->
+          <p class="text-sm leading-relaxed mb-3">Harnessing geometry, topology &amp; AI to decode markets, games and sports.</p>
+          <!-- Compact badges with icons summarising my core domains -->
+          <div class="flex flex-wrap gap-3 mb-3">
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
+              <span data-lucide="activity" class="w-5 h-5"></span><span>TDA</span>
+            </span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
+              <span data-lucide="layers" class="w-5 h-5"></span><span>Geom&nbsp;DL</span>
+            </span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
+              <span data-lucide="terminal" class="w-5 h-5"></span><span>Full‑stack</span>
+            </span>
           </div>
-          <p class="text-sm leading-relaxed">Decoding complex systems through geometry‑aware machine learning, topological data analysis and probabilistic reasoning &mdash; from finance to sports to games.</p>
-          <a href="resume.html" class="inline-block mt-3 px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
+          <p class="text-xs text-gray-700 dark:text-gray-300">Exploring how mathematical structure and machine learning can reveal patterns in financial markets, games and everyday systems.</p>
+          <a href="resume.html" class="inline-block mt-4 px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
         </div>
       </div>
     </section>
@@ -175,10 +183,10 @@
                 <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="Swim" onclick="setActivityFilter(event)">Swimming</button>
               </div>
             </div>
-            <p class="text-sm"><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> mi total distance</p>
-            <p class="text-sm"><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours of movement</p>
-            <p class="text-sm"><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> sessions</p>
-            <p class="text-sm">Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> mi</p>
+            <p class="text-sm flex items-center"><span data-lucide="map-pin" class="w-4 h-4 mr-2"></span><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> mi total distance</p>
+            <p class="text-sm flex items-center"><span data-lucide="clock" class="w-4 h-4 mr-2"></span><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours of movement</p>
+            <p class="text-sm flex items-center"><span data-lucide="list" class="w-4 h-4 mr-2"></span><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> sessions</p>
+            <p class="text-sm flex items-center"><span data-lucide="flag" class="w-4 h-4 mr-2"></span>Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> mi</p>
           </div>
           <!-- Weekly bar chart -->
           <div class="p-4 bg-gray-50 dark:bg-gray-900 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2">
@@ -477,9 +485,9 @@
           <div>
             <h3 class="text-xl font-semibold text-accent-DEFAULT">Infectious Diseases Database</h3>
             <ul class="list-disc list-inside space-y-1 text-sm my-2">
-              <li>Designed a structured SQL database for infectious disease records and sample queries.</li>
-              <li>Populated tables via insert scripts and implemented Java helpers to interact with the data.</li>
-              <li>Demonstrates fundamental CRUD operations and database querying skills.</li>
+              <li>Built a relational database to store and query infectious disease records.</li>
+              <li>Populated tables via insert scripts and wrote SQL queries to practice joins and aggregates.</li>
+              <li>Integrated a Java program to perform CRUD operations and demonstrate database interaction.</li>
             </ul>
             <div class="flex flex-wrap gap-2 mt-2">
               <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">SQL</span>
@@ -494,9 +502,9 @@
           <div>
             <h3 class="text-xl font-semibold text-accent-DEFAULT">Special Relativity Physics Engine</h3>
             <ul class="list-disc list-inside space-y-1 text-sm my-2">
-              <li>Interactive educational website simulating special relativity scenarios in real time.</li>
-              <li>Demonstrates time dilation and length contraction with intuitive controls to pause, rewind and explore.</li>
-              <li>Built with vanilla HTML, CSS &amp; JavaScript for maximum accessibility.</li>
+              <li>Developed an interactive web app that simulates special relativity scenarios in real time.</li>
+              <li>Illustrates time dilation, length contraction and simultaneity with intuitive controls to pause, rewind and explore.</li>
+              <li>Built with vanilla HTML, CSS &amp; JavaScript for accessibility and performance.</li>
             </ul>
             <div class="flex flex-wrap gap-2 mt-2">
               <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">JavaScript</span>
@@ -511,9 +519,9 @@
           <div>
             <h3 class="text-xl font-semibold text-accent-DEFAULT">Gowda Poker Room</h3>
             <ul class="list-disc list-inside space-y-1 text-sm my-2">
-              <li>A lightweight leaderboard &amp; tournament tracker for home poker games.</li>
-              <li>Admins can add players, record buy‑ins and cash‑outs, and create sessions using a simple UI.</li>
-              <li>Runs entirely in the browser using localStorage with no server backend.</li>
+              <li>Zero‑backend poker leaderboard for home games – runs fully in the browser.</li>
+              <li>Allows admins to create sessions, add players, and record buy‑ins and cash‑outs via an intuitive UI.</li>
+              <li>Data persists in localStorage; no logins or server setup required.</li>
             </ul>
             <div class="flex flex-wrap gap-2 mt-2">
               <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">JavaScript</span>
@@ -796,6 +804,7 @@
         btn.textContent = more.classList.contains('hidden') ? 'View More' : 'Hide';
       }
     }
+    // Expose the toggle function globally so the button can call it when clicked
     window.toggleMoreProjects = toggleMoreProjects;
 
     /*
