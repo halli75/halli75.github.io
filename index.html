@@ -99,16 +99,19 @@
             <a href="https://www.linkedin.com/in/arnav-gowda-86b835217/" target="_blank" class="px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors">LinkedIn</a>
           </div>
         </div>
-        <!-- Snapshot card -->
-        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-4">
-          <h3 class="font-semibold text-lg">Snapshot</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">TDA</span>
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Geometric DL</span>
-            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs">Full‑stack</span>
+        <!-- Snapshot card rewritten with a decorative illustration and richer description -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
+          <!-- A subtle illustration conveys quantitative research and data science themes -->
+          <img src="abstract_art.png" alt="Abstract geometric illustration" class="w-full h-24 object-cover rounded-lg mb-3" />
+          <h3 class="text-xl font-semibold mb-2">Snapshot</h3>
+          <!-- Colourful badges with icons summarise my core domains -->
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="activity" class="w-4 h-4"></span>TDA</span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="layers" class="w-4 h-4"></span>Geom&nbsp;DL</span>
+            <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1"><span data-lucide="terminal" class="w-4 h-4"></span>Full‑stack</span>
           </div>
-          <p class="text-sm leading-relaxed">Building scalable systems and exploring probabilistic decision‑making across finance, sports, and games. Focused on geometry‑aware ML and quantitative research.</p>
-          <a href="resume.html" class="inline-block px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
+          <p class="text-sm leading-relaxed">Decoding complex systems through geometry‑aware machine learning, topological data analysis and probabilistic reasoning &mdash; from finance to sports to games.</p>
+          <a href="resume.html" class="inline-block mt-3 px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
         </div>
       </div>
     </section>
@@ -172,10 +175,10 @@
                 <button class="px-2 py-1 rounded border text-xs hover:bg-accent-DEFAULT hover:text-white" data-filter="Swim" onclick="setActivityFilter(event)">Swimming</button>
               </div>
             </div>
-            <p class="text-sm"><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> km total distance</p>
+            <p class="text-sm"><span id="monthlyDistance" class="font-bold text-accent-DEFAULT">0</span> mi total distance</p>
             <p class="text-sm"><span id="monthlyHours" class="font-bold text-accent-DEFAULT">0</span> hours of movement</p>
             <p class="text-sm"><span id="monthlyActivities" class="font-bold text-accent-DEFAULT">0</span> sessions</p>
-            <p class="text-sm">Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> km</p>
+            <p class="text-sm">Longest: <span id="monthlyLongest" class="font-bold text-accent-DEFAULT">0</span> mi</p>
           </div>
           <!-- Weekly bar chart -->
           <div class="p-4 bg-gray-50 dark:bg-gray-900 border border-accent-DEFAULT rounded-lg dark:border-accent-light space-y-2">
@@ -183,7 +186,7 @@
             <div class="w-full h-32">
               <canvas id="weeklyChart"></canvas>
             </div>
-            <p class="text-xs mt-1">Best distance week: <span id="bestDistanceWeek" class="font-bold text-accent-DEFAULT">0</span> km</p>
+            <p class="text-xs mt-1">Best distance week: <span id="bestDistanceWeek" class="font-bold text-accent-DEFAULT">0</span> mi</p>
           </div>
         </div>
         <!-- Recent activities list -->
@@ -237,7 +240,7 @@
     <section id="education" class="space-y-6">
       <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
       <div class="space-y-4">
-        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
           <h3 class="text-2xl font-semibold text-accent-DEFAULT">University of Maryland, College Park</h3>
           <p class="italic text-sm mb-1">B.S. Computer Science (Machine Learning), Applied Mathematics</p>
           <p class="text-sm mb-2">GPA: 3.51 • Dean’s List</p>
@@ -252,7 +255,7 @@
       <h2 class="text-3xl font-bold text-center mb-6">Experience</h2>
       <div class="space-y-6">
         <!-- Ivoyant experience -->
-        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
             <!-- Official Ivoyant logo using SVG downloaded from their site. If this image fails to load, it will degrade gracefully due to the defined dimensions. -->
             <img src="ivoyant.svg" alt="Ivoyant Logo" class="w-16 h-16 object-contain rounded" />
@@ -268,7 +271,7 @@
           </div>
         </div>
         <!-- UMD experience -->
-        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
             <!-- UMD logo resides at the repository root (GitHub Pages flattens directories) -->
             <img src="umd.png" alt="UMD Logo" class="w-16 h-16 object-contain rounded" />
@@ -283,7 +286,7 @@
           </div>
         </div>
         <!-- Other work: Amateur Poker -->
-        <div class="p-6 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
           <h3 class="text-xl font-semibold">Other Work</h3>
           <div class="mt-2">
             <h4 class="font-semibold mb-1 text-accent-DEFAULT">Amateur Poker (NLHE)</h4>
@@ -299,7 +302,7 @@
     </section>
 
     <!-- Projects & Research Section -->
-    <section id="projects" class="space-y-6">
+    <section id="projects-old" class="space-y-6 hidden">
       <h2 class="text-3xl font-bold text-center mb-6">Projects & Research</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Black-Scholes Project -->
@@ -401,6 +404,182 @@
             </div>
           </div>
           <a href="https://github.com/halli75/baccarat_sim" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newly designed Projects section -->
+    <section id="projects" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
+      <!-- Top featured projects -->
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Black‑Scholes Options Pricing Model -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Black‑Scholes Options Pricing Model</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Developed a Python engine to price European options with &lt;0.1% deviation from market benchmarks.</li>
+              <li>Vectorized batch-pricing over 20k+ contracts in under 0.5s.</li>
+              <li>Built CLI and visuals for traders to price portfolios efficiently.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NumPy</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">SciPy</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/blackscholes_pricer" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Last‑Mile Delivery Platform -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Last‑Mile Delivery Platform</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Built a microservices supply‑chain platform with 9 back‑end services in Java Spring Boot on AWS.</li>
+              <li>Implemented event‑driven REST APIs with OAuth2, RabbitMQ, Kafka and &lt;100&nbsp;ms latency.</li>
+              <li>Deployed with Docker &amp; added observability (Prometheus, Jaeger) for 100% uptime.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Java</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Spring Boot</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">AWS</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/Last-Mile-Delivery-Platform" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- AI Blackjack Card Counter -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">AI Blackjack Card Counter</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Created a blackjack simulator using TensorFlow &amp; PyTorch to learn optimal play.</li>
+              <li>Crafted a custom data pipeline for supervised and reinforcement learning.</li>
+              <li>Tuned models and tracked EV, achieving +2.2% EV/hr in simulations.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">TensorFlow</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">PyTorch</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">R</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/BlackjackCardCounter" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+      </div>
+      <!-- Toggle button to reveal additional projects -->
+      <div class="text-center">
+        <button id="viewMoreBtn" type="button" class="mt-6 px-4 py-2 rounded-lg border border-accent-DEFAULT text-accent-DEFAULT hover:bg-accent-DEFAULT hover:text-white transition-colors" onclick="toggleMoreProjects()">View More</button>
+      </div>
+      <!-- Additional projects hidden by default -->
+      <div id="moreProjects" class="hidden mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Infectious Diseases Database -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Infectious Diseases Database</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Designed a structured SQL database for infectious disease records and sample queries.</li>
+              <li>Populated tables via insert scripts and implemented Java helpers to interact with the data.</li>
+              <li>Demonstrates fundamental CRUD operations and database querying skills.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">SQL</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Java</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Database</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/infectious_diseases" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Special Relativity Physics Engine -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Special Relativity Physics Engine</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Interactive educational website simulating special relativity scenarios in real time.</li>
+              <li>Demonstrates time dilation and length contraction with intuitive controls to pause, rewind and explore.</li>
+              <li>Built with vanilla HTML, CSS &amp; JavaScript for maximum accessibility.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">JavaScript</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">HTML</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Education</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/physicsengine" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+        <!-- Gowda Poker Room -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Gowda Poker Room</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>A lightweight leaderboard &amp; tournament tracker for home poker games.</li>
+              <li>Admins can add players, record buy‑ins and cash‑outs, and create sessions using a simple UI.</li>
+              <li>Runs entirely in the browser using localStorage with no server backend.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">JavaScript</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Web</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Gaming</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/gowda-poker-room" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="space-y-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Research</h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- NFT Research Paper -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">NFT Valuation &amp; Global Market Impact (2022)</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Examined NFT prices using financial metrics like Treynor ratio and Sharpe ratio.</li>
+              <li>Explored how NFT markets ripple into broader financial ecosystems.</li>
+              <li>Posits that NFTs may evolve into a new class of asset‑backed securities.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Research</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NFTs</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Finance</span>
+            </div>
+          </div>
+          <a href="paper1.pdf" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light" target="_blank">View PDF</a>
+        </div>
+        <!-- Hybrid DL & NLP Cybersecurity Paper -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">Hybrid DL &amp; NLP Cybersecurity for Small Businesses (2023)</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Proposes a cloud‑based cybersecurity system combining deep learning and natural language processing.</li>
+              <li>Aims to democratise affordable AI‑driven intrusion detection for small businesses.</li>
+              <li>Highlights the importance of accessible threat classification in an evolving digital landscape.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Research</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Cybersecurity</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NLP</span>
+            </div>
+          </div>
+          <button disabled class="mt-4 inline-block px-3 py-1 bg-gray-400 text-gray-800 dark:bg-gray-700 dark:text-gray-400 rounded cursor-not-allowed">View PDF Coming Soon</button>
+        </div>
+        <!-- TDA & Geometric DL for Regime Shifts -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT flex items-center">TDA &amp; Geometric DL for Market Regime Shifts (2023–24) <span class="ml-2 text-xs px-2 py-0.5 rounded bg-yellow-300/30 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-200">WIP</span></h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Combines topological data analysis and geometric deep learning to detect market regime changes.</li>
+              <li>Investigates how subtle shifts in market topology signal transitions between bullish, bearish or chaotic states.</li>
+              <li>Work in progress exploring cutting‑edge methods for high‑frequency financial data.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Research</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">TDA</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Geometric DL</span>
+            </div>
+          </div>
+          <span class="mt-4 inline-block px-3 py-1 bg-yellow-300/30 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-200 rounded">In Progress</span>
         </div>
       </div>
     </section>
@@ -607,6 +786,18 @@
     }
     window.updateSportsRange = updateSportsRange;
 
+    // Toggle visibility of additional projects
+    function toggleMoreProjects() {
+      const more = document.getElementById('moreProjects');
+      if (!more) return;
+      more.classList.toggle('hidden');
+      const btn = document.getElementById('viewMoreBtn');
+      if (btn) {
+        btn.textContent = more.classList.contains('hidden') ? 'View More' : 'Hide';
+      }
+    }
+    window.toggleMoreProjects = toggleMoreProjects;
+
     /*
      * Parse activities CSV and compute running/training statistics.
      * The CSV is loaded from a file hosted with the site (activities.csv).
@@ -754,92 +945,6 @@
     return entries.slice(-6);
   }
 
-    // Compute the most active 90‑day period.
-    // This function slides a 90‑day window across the filtered activities and finds
-    // the window with the greatest total distance. It returns aggregated statistics
-    // for that window: total distance, total hours, number of activities and longest run.
-    function computePeak90Stats() {
-      // Filter activities by the current type
-      const filtered = activities
-        .filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter)
-        .sort((a, b) => a.date - b.date);
-      if (filtered.length === 0) {
-        return { distance: 0, hours: 0, count: 0, longest: 0 };
-      }
-
-    // Get the most recent N activities based on date and current filter.
-    function getRecentActivities(n) {
-      // Filter activities by current activity type
-      const filtered = activities
-        .filter(act => currentActivityFilter === 'all' || act.type === currentActivityFilter)
-        .sort((a, b) => b.date - a.date);
-      return filtered.slice(0, n);
-    }
-
-    // Compute statistics for the last N activities. Defaults to 30.
-    function computeRecentStats(n = 30) {
-      const recent = getRecentActivities(n);
-      let totalDist = 0;
-      let totalHours = 0;
-      let longest = 0;
-      recent.forEach(act => {
-        totalDist += act.distance;
-        totalHours += act.elapsed / 3600;
-        if (act.distance > longest) longest = act.distance;
-      });
-      return { distance: totalDist, hours: totalHours, count: recent.length, longest: longest };
-    }
-
-    // Compute weekly statistics for the most recent N activities. Defaults to 30.
-    function computeWeeklyStatsRecent(n = 30) {
-      const recent = getRecentActivities(n);
-      const weeks = {};
-      recent.forEach(act => {
-        const date = act.date;
-        // Determine the Monday (or same-day-of-week) start of the week
-        const weekStart = new Date(date);
-        const day = weekStart.getDay();
-        const diff = (day + 6) % 7;
-        weekStart.setDate(weekStart.getDate() - diff);
-        weekStart.setHours(0, 0, 0, 0);
-        const key = weekStart.toISOString().split('T')[0];
-        if (!weeks[key]) {
-          weeks[key] = { distance: 0, hours: 0 };
-        }
-        weeks[key].distance += act.distance;
-        weeks[key].hours += act.elapsed / 3600;
-      });
-      // Transform into sorted array of weeks
-      const entries = Object.entries(weeks).map(([k, v]) => ({ week: k, distance: v.distance, hours: v.hours }));
-      entries.sort((a, b) => new Date(a.week) - new Date(b.week));
-      // Keep the last 6 weeks for a cleaner chart
-      return entries.slice(-6);
-    }
-      let best = { distance: 0, hours: 0, count: 0, longest: 0 };
-      const ninetyMs = 90 * 24 * 60 * 60 * 1000;
-      for (let i = 0; i < filtered.length; i++) {
-        let totalDist = 0;
-        let totalHours = 0;
-        let count = 0;
-        let longest = 0;
-        const startDate = filtered[i].date;
-        for (let j = i; j < filtered.length; j++) {
-          const diff = filtered[j].date - startDate;
-          if (diff <= ninetyMs) {
-            totalDist += filtered[j].distance;
-            totalHours += filtered[j].elapsed / 3600;
-            count++;
-            if (filtered[j].distance > longest) longest = filtered[j].distance;
-          } else {
-            break;
-          }
-        }
-        if (totalDist > best.distance) {
-          best = { distance: totalDist, hours: totalHours, count: count, longest: longest };
-        }
-      }
-      return best;
-    }
 
     // Compute weekly stats for last 8 weeks
     function computeWeeklyStats() {
@@ -931,7 +1036,7 @@
         } else {
           rel = diffDays + 'd';
         }
-        li.innerHTML = `<span>${act.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})} – ${mins} mins – ${km.toFixed(1)} km</span><span class="text-gray-500 dark:text-gray-400">${rel}</span>`;
+        li.innerHTML = `<span>${act.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})} – ${mins} mins – ${km.toFixed(1)} mi</span><span class="text-gray-500 dark:text-gray-400">${rel}</span>`;
         listEl.appendChild(li);
       });
     }
