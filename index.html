@@ -100,26 +100,29 @@
           </div>
         </div>
         <!-- Snapshot card rewritten with a decorative illustration and richer description -->
-        <div class="p-6 rounded-lg shadow-md bg-gradient-to-br from-accent-DEFAULT/10 via-accent-DEFAULT/5 to-accent-DEFAULT/0 dark:from-accent-dark/20 dark:via-accent-dark/10 dark:to-accent-dark/0">
-          <!-- Optional illustration remains for visual interest -->
-          <img src="abstract_art.png" alt="Abstract geometric illustration" class="w-full h-24 object-cover rounded-lg mb-3" />
-          <h3 class="text-xl font-semibold mb-2">Snapshot</h3>
-          <!-- A concise tagline describing my mission -->
-          <p class="text-sm leading-relaxed mb-3">Harnessing geometry, topology &amp; AI to decode markets, games and sports.</p>
-          <!-- Compact badges with icons summarising my core domains -->
-          <div class="flex flex-wrap gap-3 mb-3">
+        <div class="p-6 rounded-lg shadow-md bg-gradient-to-br from-accent-DEFAULT/25 via-accent-DEFAULT/15 to-transparent dark:from-accent-dark/30 dark:via-accent-dark/20 dark:to-transparent">
+          <!-- Snapshot header with a sparkle icon to hint at creativity -->
+          <h3 class="text-xl font-semibold mb-2 flex items-center gap-2">
+            <span data-lucide="sparkles" class="w-5 h-5"></span>
+            Snapshot
+          </h3>
+          <!-- Creative tagline capturing my cross‑disciplinary spirit -->
+          <p class="text-sm mb-2">Quant research meets creative problem solving — bridging math, markets and games.</p>
+          <!-- Short description emphasising how I blend my core domains -->
+          <p class="text-xs text-gray-700 dark:text-gray-300 mb-3">Blending TDA, geometric&nbsp;DL &amp; full‑stack skills to uncover hidden structures and build high‑impact systems.</p>
+          <!-- Domain badges with icons -->
+          <div class="flex flex-wrap gap-2 mb-3">
             <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
-              <span data-lucide="activity" class="w-5 h-5"></span><span>TDA</span>
+              <span data-lucide="activity" class="w-4 h-4"></span><span>TDA</span>
             </span>
             <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
-              <span data-lucide="layers" class="w-5 h-5"></span><span>Geom&nbsp;DL</span>
+              <span data-lucide="layers" class="w-4 h-4"></span><span>Geom&nbsp;DL</span>
             </span>
             <span class="px-3 py-1 rounded bg-accent-DEFAULT/20 text-accent-DEFAULT text-xs flex items-center gap-1">
-              <span data-lucide="terminal" class="w-5 h-5"></span><span>Full‑stack</span>
+              <span data-lucide="terminal" class="w-4 h-4"></span><span>Full‑stack</span>
             </span>
           </div>
-          <p class="text-xs text-gray-700 dark:text-gray-300">Exploring how mathematical structure and machine learning can reveal patterns in financial markets, games and everyday systems.</p>
-          <a href="resume.html" class="inline-block mt-4 px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">Resume</a>
+          <a href="resume.html" class="inline-block mt-2 px-4 py-2 rounded-lg bg-accent-DEFAULT text-white hover:bg-accent-light transition-colors">View Resume</a>
         </div>
       </div>
     </section>
@@ -245,7 +248,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="space-y-6">
+    <section id="education" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
       <div class="space-y-4">
         <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light">
@@ -259,7 +262,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="space-y-6">
+    <section id="experience" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Experience</h2>
       <div class="space-y-6">
         <!-- Ivoyant experience -->
@@ -417,7 +420,7 @@
     </section>
 
     <!-- Newly designed Projects section -->
-    <section id="projects" class="space-y-6">
+    <section id="projects" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
       <!-- Top featured projects -->
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -535,7 +538,7 @@
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="space-y-6">
+    <section id="research" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Research</h2>
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- NFT Research Paper -->
@@ -593,7 +596,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="space-y-6">
+    <section id="skills" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
       <div class="flex flex-wrap justify-center gap-3">
         <!-- Languages -->
@@ -1008,7 +1011,7 @@
         const ratio = data.length > 1 ? i / (data.length - 1) : 0;
         // Compute alpha gradient from 0.5 to 0.9
         const alpha = 0.5 + 0.4 * ratio;
-        // Build an 8-digit hex code with alpha channel. Remove '#' and append alpha as two hex digits.
+        // Build an 8‑digit hex code with alpha channel. Remove '#' and append alpha as two hex digits.
         let hex = accentLight.replace('#','');
         const a = Math.round(alpha * 255).toString(16).padStart(2, '0');
         const fillColor = '#' + hex + a;
@@ -1016,8 +1019,15 @@
         const y = canvas.height - ((item.distance / (maxVal || 1)) * (canvas.height - 20)) - 10;
         const h = canvas.height - y - 10;
         const w = barWidth * 0.8;
+        // Draw bar with gradient fill
         ctx.fillStyle = fillColor;
         ctx.fillRect(x, y, w, h);
+        // Draw numeric label centred above the bar for visual interest
+        const label = item.distance.toFixed(1);
+        ctx.fillStyle = accent;
+        ctx.font = '10px sans-serif';
+        const textWidth = ctx.measureText(label).width;
+        ctx.fillText(label, x + w / 2 - textWidth / 2, y - 4);
       });
     }
 
@@ -1031,7 +1041,7 @@
       const now = new Date();
       filtered.slice(0, 5).forEach(act => {
         const li = document.createElement('li');
-        li.className = 'flex justify-between';
+        li.className = 'flex justify-between items-center';
         const km = act.distance;
         const mins = Math.round(act.elapsed / 60);
         const diffDays = Math.floor((now - act.date) / (1000 * 3600 * 24));
@@ -1045,9 +1055,25 @@
         } else {
           rel = diffDays + 'd';
         }
-        li.innerHTML = `<span>${act.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})} – ${mins} mins – ${km.toFixed(1)} mi</span><span class="text-gray-500 dark:text-gray-400">${rel}</span>`;
+        // Choose an appropriate icon based on activity type for extra flair
+        let icon = 'activity';
+        if (act.type === 'Ride') icon = 'bike';
+        else if (act.type === 'Swim') icon = 'swimming';
+        const dateStr = act.date.toLocaleDateString(undefined,{month:'short',day:'numeric'});
+        // Compose the list item with an icon, date, duration and distance (mi)
+        li.innerHTML = `
+          <span class="flex items-center gap-2">
+            <span data-lucide="${icon}" class="w-4 h-4"></span>
+            <span>${dateStr} – ${mins} mins – ${km.toFixed(1)} mi</span>
+          </span>
+          <span class="text-gray-500 dark:text-gray-400">${rel}</span>
+        `;
         listEl.appendChild(li);
       });
+      // After injecting new icons, call lucide to replace placeholders with SVGs
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     }
 
     // Update training stats and charts
