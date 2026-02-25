@@ -89,7 +89,7 @@
                Recruiters can quickly scan these lines to understand my academic focus,
                current research directions and the types of projects I build. -->
           <ul class="space-y-1 text-base md:text-lg list-disc pl-5">
-            <li>🎓 Junior at the University of Maryland (Class&nbsp;of&nbsp;2025) studying CS &amp; Applied&nbsp;Mathematics</li>
+            <li>🎓 Junior at the University of Maryland (Class&nbsp;of&nbsp;2027) studying CS &amp; Applied&nbsp;Mathematics</li>
             <li>🔬 Currently researching topological data analysis &amp; geometric deep learning to detect regime shifts in high‑frequency financial markets</li>
             <li>🛠️ Building scalable systems in quantitative finance, logistics optimisation &amp; AI‑driven applications</li>
           </ul>
@@ -134,7 +134,7 @@
       <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md space-y-2">
         <h3 class="text-2xl font-semibold mb-3 text-accent-DEFAULT">Overview</h3>
         <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
-          <li>Studying Computer Science &amp; Applied Mathematics at the University of Maryland (Class&nbsp;of&nbsp;2025)</li>
+          <li>Studying Computer Science &amp; Applied Mathematics at the University of Maryland (Class&nbsp;of&nbsp;2027)</li>
           <li>Researching topological data analysis &amp; geometric deep learning to detect regime shifts in high‑frequency financial markets</li>
           <li>Currently building scalable systems in quantitative finance, logistics optimisation &amp; AI‑driven games</li>
         </ul>
@@ -265,6 +265,21 @@
     <section id="experience" class="space-y-6 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md">
       <h2 class="text-3xl font-bold text-center mb-6">Experience</h2>
       <div class="space-y-6">
+        <!-- Amazon experience -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
+          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+            <img src="amazon_logo.png" alt="Amazon Logo" class="w-16 h-16 object-contain rounded" />
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Amazon: Software Engineer | Contract via ADC with Project LEO</h3>
+            <p class="text-sm italic mb-2">2025 - Current</p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Designed and deployed machine learning models to detect airport perimeters using UK satellite imagery, achieving &gt;90% boundary IoU accuracy across multiple test airports.</li>
+              <li>Built modular pipelines for data ingestion, preprocessing, and ML inference with TensorFlow and PyTorch, then deployed production workflows on AWS Fargate with AWS S3 storage.</li>
+              <li>Developed REST APIs for coordinate-based queries and automated shapefile generation to export airport exclusion zones reliably across international datasets.</li>
+            </ul>
+          </div>
+        </div>
         <!-- Ivoyant experience -->
         <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col md:flex-row md:items-start md:space-x-4">
           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
@@ -305,6 +320,12 @@
               <li>Applied probabilistic decision making and GTO-informed strategies to live and online cash games.</li>
               <li>Tracked EV and variance across thousands of hands using custom spreadsheets and statistical tools.</li>
               <li>Analyzed selection biases and mental game factors to maintain optimal bankroll management and control tilt.</li>
+            </ul>
+          </div>
+          <div class="mt-4">
+            <h4 class="font-semibold mb-1 text-accent-DEFAULT">Youth Cross Country/Track &amp; Field Coach</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Mentored youth athletes on training plans, race strategy, and long-term development in cross country and track.</li>
             </ul>
           </div>
           <!-- Future entries (e.g., Teaching Assistant, clubs) can be added here -->
@@ -424,6 +445,23 @@
       <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
       <!-- Top featured projects -->
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- AI Content Creation Platform -->
+        <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT">AI Content Creation Platform</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm my-2">
+              <li>Built an end-to-end platform for custom character creation, consistent LoRA training, and reusable wardrobe and set asset management.</li>
+              <li>Enabled image/video generation plus face and full-character swaps with configurable poses, backgrounds, and motion controls.</li>
+              <li>Shipped a production SaaS stack with tiered subscriptions using AWS, TypeScript, and Python for scalable inference and API orchestration.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">AWS</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">TypeScript</span>
+              <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">Python</span>
+            </div>
+          </div>
+          <a href="https://github.com/halli75/escapematrix" target="_blank" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light">View Repo</a>
+        </div>
         <!-- Black‑Scholes Options Pricing Model -->
         <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
           <div>
@@ -573,12 +611,12 @@
               <span class="text-xs bg-accent-DEFAULT/20 text-accent-DEFAULT px-2 py-1 rounded">NLP</span>
             </div>
           </div>
-          <button disabled class="mt-4 inline-block px-3 py-1 bg-gray-400 text-gray-800 dark:bg-gray-700 dark:text-gray-400 rounded cursor-not-allowed">View PDF Coming Soon</button>
+          <a href="Cybersecurity final paper (6).pdf" class="mt-4 inline-block px-3 py-1 bg-accent-DEFAULT text-white rounded hover:bg-accent-light" target="_blank">View PDF</a>
         </div>
         <!-- TDA & Geometric DL for Regime Shifts -->
         <div class="p-6 bg-gray-100 dark:bg-gray-800 border border-accent-DEFAULT rounded-lg dark:border-accent-light flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-semibold text-accent-DEFAULT flex items-center">TDA &amp; Geometric DL for Market Regime Shifts (2025) <span class="ml-2 text-xs px-2 py-0.5 rounded bg-yellow-300/30 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-200">WIP</span></h3>
+            <h3 class="text-xl font-semibold text-accent-DEFAULT flex items-center">TDA &amp; Geometric DL for Market Regime Shifts (2025-2026) <span class="ml-2 text-xs px-2 py-0.5 rounded bg-yellow-300/30 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-200">WIP</span></h3>
             <ul class="list-disc list-inside space-y-1 text-sm my-2">
               <li>Combines topological data analysis and geometric deep learning to detect market regime changes.</li>
               <li>Investigates how subtle shifts in market topology signal transitions between bullish, bearish or chaotic states.</li>
