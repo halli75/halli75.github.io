@@ -3,6 +3,8 @@
   const themeToggle = document.getElementById("themeToggle");
   const menuToggle = document.getElementById("menuToggle");
   const siteNav = document.getElementById("siteNav");
+  const projectsToggle = document.getElementById("projectsToggle");
+  const projectsOverflow = document.getElementById("projectsOverflow");
   const prefersNight = window.matchMedia("(prefers-color-scheme: dark)");
   const hasAnalytics =
     Boolean(document.getElementById("trainingChart")) ||
@@ -71,6 +73,17 @@
     );
     elements.forEach(function (element) {
       observer.observe(element);
+    });
+  }
+
+  function initializeProjectsToggle() {
+    if (!projectsToggle || !projectsOverflow) return;
+
+    projectsToggle.addEventListener("click", function () {
+      const isExpanded = projectsToggle.getAttribute("aria-expanded") === "true";
+      projectsOverflow.hidden = isExpanded;
+      projectsToggle.setAttribute("aria-expanded", String(!isExpanded));
+      projectsToggle.textContent = isExpanded ? "See More Projects" : "Show Fewer Projects";
     });
   }
 
@@ -474,6 +487,7 @@
     themeToggle.addEventListener("click", toggleTheme);
   }
   initializeMenu();
+  initializeProjectsToggle();
   initializeReveal();
   initializeControls();
   initializeData();

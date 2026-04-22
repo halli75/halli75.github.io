@@ -32,10 +32,14 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#analytics">Field Notes</a>
-        <a href="#skills">Stack</a>
+        <a href="#skills">Skills</a>
         <a href="resume.html">Resume</a>
       </nav>
       <div class="header-controls">
+        <div class="header-links" aria-label="External profiles">
+          <a href="https://github.com/halli75" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/arnav-gowda-86b835217/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
           Night Edition
         </button>
@@ -51,19 +55,16 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Machine Learning / Quantitative Systems / Research Engineering</p>
-          <h1>
-            A research-forward portfolio built like a field dossier:
-            rigorous, visual, and impossible to skim incorrectly.
-          </h1>
+          <h1>Research, production ML systems, and quant tooling without the filler.</h1>
           <p class="lede">
-            I study Computer Science and Applied Mathematics at the University of Maryland
-            (Class of 2027), build production AI systems, and write research across geometric
-            deep learning, representation learning, and market structure.
+            I study Computer Science and Applied Mathematics at the University of Maryland,
+            build deployable AI systems, and write around geometric learning, representation
+            structure, and financial regime detection.
           </p>
           <div class="hero-actions">
             <a class="button button-solid" href="#research">Open Research Archive</a>
-            <a class="button button-outline" href="https://github.com/halli75" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="button button-outline" href="https://www.linkedin.com/in/arnav-gowda-86b835217/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button button-outline" href="#projects">Browse Projects</a>
+            <a class="button button-outline" href="resume.html">Resume</a>
           </div>
         </div>
         <aside class="hero-panel">
@@ -100,54 +101,22 @@
       </div>
     </section>
 
-    <section class="overview section-shell reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Positioning</p>
-        <h2>Built for people evaluating signal, not just style.</h2>
-      </div>
-      <div class="overview-grid">
-        <article class="paper-card">
-          <p class="card-kicker">About</p>
-          <h3>What this portfolio is solving</h3>
-          <p>
-            This site makes it fast to assess whether I can move between proofs,
-            ML systems, and product-grade implementation without losing rigor in any layer.
-          </p>
-        </article>
-        <article class="paper-card">
-          <p class="card-kicker">Audience</p>
-          <h3>Who should care</h3>
-          <p>
-            Recruiters, research labs, startups, and engineering teams looking for someone who
-            can operate comfortably in both technical depth and execution detail.
-          </p>
-        </article>
-        <article class="paper-card">
-          <p class="card-kicker">Interests</p>
-          <h3>Outside the lab</h3>
-          <p>
-            Distance running, poker, sports betting, game theory, chess, French, triathlon,
-            and long-horizon thinking under uncertainty.
-          </p>
-        </article>
-      </div>
-    </section>
-
     <section id="research" class="section-shell reveal">
       <div class="section-heading">
-        <p class="eyebrow">Research Archive</p>
-        <h2>Finished papers, active theses, and the next open problem.</h2>
+        <p class="eyebrow">Selected Papers</p>
+        <h2>Research</h2>
       </div>
       <div class="feature-research">
         <article class="feature-card">
           <div class="feature-header">
             <p class="card-kicker">Completed / 2025-2026</p>
-            <h3>TDA &amp; Geometric DL for Market Regime Shifts</h3>
+            <h3>Walk-Forward Econometric-Graph Models for Volatility Regime Detection</h3>
+            <p class="feature-subtitle">When classical baselines win and where learned geometry adds value.</p>
           </div>
           <ul class="note-list">
-            <li>Applies topological data analysis and geometric deep learning to detect structural transitions in financial market behavior.</li>
-            <li>Frames regime shifts through geometry rather than conventional indicator-based heuristics.</li>
-            <li>Now published with both the full paper and code accessible from the site.</li>
+            <li>Uses walk-forward validation to cut the validation-to-test generalization gap that single-split evaluation inflates in nonstationary markets.</li>
+            <li>Shows EGARCH, HAR-RV, and MS-GARCH remain strong baselines for probability ranking and calibration on regime-transition prediction.</li>
+            <li>Finds learned geometry helps more on event-level detection and in hybrid ensembles than on raw probability ranking alone.</li>
           </ul>
           <div class="card-actions">
             <a class="button button-solid" href="tda-gdl-regimeshift.pdf" target="_blank" rel="noreferrer">View PDF</a>
@@ -157,7 +126,8 @@
         <article class="feature-card feature-card-alt">
           <div class="feature-header">
             <p class="card-kicker">WIP / JEPA Theory</p>
-            <h3>Geometry-Adaptive JEPA: Optimal Latent Priors Beyond the Isotropic Gaussian with Provable Convergence</h3>
+            <h3>Geometry-Adaptive JEPA</h3>
+            <p class="feature-subtitle">Optimal Latent Priors Beyond the Isotropic Gaussian with Provable Convergence</p>
           </div>
           <ul class="note-list">
             <li>Shows that the isotropic SIGReg prior is provably suboptimal when intrinsic dimension <code>k</code> is smaller than latent dimension <code>d</code>, explaining low-dimensional failure modes.</li>
@@ -173,9 +143,9 @@
           <p class="card-kicker">Research / 2023-2024</p>
           <h3>Hybrid DL &amp; NLP Cybersecurity for Small Businesses</h3>
           <ul class="note-list compact">
-            <li>Cloud-based cybersecurity system combining deep learning and NLP.</li>
-            <li>Targets accessible, lower-cost AI intrusion detection for small businesses.</li>
-            <li>Emphasizes practical threat classification in evolving digital environments.</li>
+            <li>Frames SMEs as primary cyber targets that need enterprise-grade defense without enterprise security budgets.</li>
+            <li>Surveys cloud security stacks that combine DL, NLP, and RL, with benchmarked intrusion and phishing systems reaching near-98% to 99%+ reported accuracy.</li>
+            <li>Closes with practical deployment guidance around shared-responsibility controls, drift monitoring, and human oversight in cloud environments.</li>
           </ul>
           <div class="card-actions">
             <a class="button button-outline" href="Cybersecurity final paper (6).pdf" target="_blank" rel="noreferrer">View PDF</a>
@@ -185,9 +155,9 @@
           <p class="card-kicker">Research / 2022</p>
           <h3>NFT Valuation &amp; Global Market Impact</h3>
           <ul class="note-list compact">
-            <li>Analyzes NFT markets with Treynor ratio, Sharpe ratio, and related finance metrics.</li>
-            <li>Examines spillover effects from speculative digital assets into broader markets.</li>
-            <li>Explores the thesis that NFTs may evolve toward asset-backed security structures.</li>
+            <li>Argues collectible NFTs carried materially higher risk than traditional investments under standard risk-return valuation frameworks.</li>
+            <li>Finds only slight comovement with major crypto assets and almost no meaningful comovement across collectible NFT projects themselves.</li>
+            <li>Projects near-term decay in collectible NFT value while arguing the durable technology is digital possession and possible asset-security infrastructure.</li>
           </ul>
           <div class="card-actions">
             <a class="button button-outline" href="paper1.pdf" target="_blank" rel="noreferrer">View PDF</a>
@@ -206,10 +176,10 @@
 
     <section id="projects" class="section-shell reveal">
       <div class="section-heading">
-        <p class="eyebrow">Project Lab</p>
-        <h2>Systems that move from idea to deployment without losing sharp edges.</h2>
+        <h2>Projects</h2>
+        <p class="section-copy">Featured systems spanning production AI, local-first video tooling, and agentic workflow automation.</p>
       </div>
-      <div class="card-grid card-grid-three">
+      <div class="card-grid card-grid-three projects-featured-grid">
         <article class="project-card">
           <p class="card-kicker">Platform</p>
           <h3>AI Content Creation Platform</h3>
@@ -249,6 +219,9 @@
             <a class="button button-outline" href="https://github.com/halli75/driftfin" target="_blank" rel="noreferrer">View Repo</a>
           </div>
         </article>
+      </div>
+
+      <div class="card-grid card-grid-three projects-overflow" id="projectsOverflow" hidden>
         <article class="project-card">
           <p class="card-kicker">Distributed Systems</p>
           <h3>Last-Mile Delivery Platform</h3>
@@ -328,12 +301,16 @@
           </div>
         </article>
       </div>
+      <div class="projects-toggle-row">
+        <button class="button button-outline projects-toggle" id="projectsToggle" type="button" aria-expanded="false" aria-controls="projectsOverflow">
+          See More Projects
+        </button>
+      </div>
     </section>
 
     <section id="experience" class="section-shell reveal">
       <div class="section-heading">
-        <p class="eyebrow">Experience Ledger</p>
-        <h2>Production work across geospatial ML, integration systems, and research computing.</h2>
+        <h2>Experience</h2>
       </div>
       <div class="timeline-grid">
         <article class="timeline-card">
@@ -343,9 +320,9 @@
             <h3>Amazon | Software Engineer</h3>
             <p class="role-note">Contract via ADC with Project LEO</p>
             <ul class="note-list compact">
-              <li>Designed and deployed ML models for airport perimeter detection using UK satellite imagery, achieving &gt;90% IoU across test airports.</li>
-              <li>Built modular ingestion, preprocessing, and inference pipelines with TensorFlow and PyTorch on AWS Fargate with S3-backed storage.</li>
-              <li>Developed REST APIs and automated shapefile export pipelines for coordinate-based regulatory exclusion zones.</li>
+              <li>Built ViT + UNet airport-perimeter segmentation on UK satellite imagery, surpassing 90% IoU across 90+ international airports while cutting GIS labeling time by roughly 70%.</li>
+              <li>Shipped modular PyTorch inference on AWS Fargate and increased throughput 3.2x through CUDA FP16 optimization.</li>
+              <li>Exposed coordinate-based REST APIs and compliant shapefile export workflows across heterogeneous datasets used by 6 operational teams.</li>
             </ul>
           </div>
         </article>
@@ -356,9 +333,9 @@
             <h3>Ivoyant | Software Engineering Intern</h3>
             <p class="role-note">Atlanta, Georgia</p>
             <ul class="note-list compact">
-              <li>Built RESTful APIs in Java and SQL for an AI-driven data conversion platform, reducing retrieval latency by 40%.</li>
-              <li>Migrated legacy infrastructure to Azure App Services and Azure Functions to improve scalability and deployment speed.</li>
-              <li>Implemented Agile workflows and CI/CD automation with Jenkins and Azure DevOps Server.</li>
+              <li>Built Java Spring Boot and SQL APIs for Data Mapper, cutting latency 40% across 12 production endpoints serving 50K+ daily requests.</li>
+              <li>Helped migrate a monolith into Azure-hosted microservices while wiring CI/CD through Jenkins and Azure DevOps.</li>
+              <li>Improved deployment speed by 35% and preserved zero downtime across 3 release cycles.</li>
             </ul>
           </div>
         </article>
@@ -369,8 +346,9 @@
             <h3>University of Maryland | AI Research Intern</h3>
             <p class="role-note">College Park, Maryland</p>
             <ul class="note-list compact">
-              <li>Collaborated with faculty and PhD researchers to build PyTorch and BioPython simulators for multi-scale cell growth modeling.</li>
-              <li>Developed spatiotemporal models using ConvLSTM, graph neural networks, and OpenMM-based simulation workflows.</li>
+              <li>Worked with a professor and PhD collaborators on PyTorch and BioPython simulators for multiscale cell-growth modeling.</li>
+              <li>Produced a 10x runtime gain over PDE-based simulation workflows while replacing heavier baselines with ConvLSTM + GNN surrogates.</li>
+              <li>Drove the learned-model error below 2% and contributed to a manuscript submitted to NeurIPS.</li>
             </ul>
           </div>
         </article>
@@ -381,17 +359,18 @@
           <p class="card-kicker">Other Work</p>
           <h3>Amateur Poker (NLHE)</h3>
           <ul class="note-list compact">
-            <li>Applied probabilistic decision making and GTO-informed strategies to live and online cash games.</li>
-            <li>Tracked EV and variance across thousands of hands using self-built analysis tools.</li>
-            <li>Focused on bankroll discipline, tilt control, and bias-aware review.</li>
+            <li>Track live and online NLHE sessions with EV, lineup context, and bankroll controls instead of relying on anecdotal recall.</li>
+            <li>Use solver study, population tendencies, and post-session review to separate sound decisions from short-run variance.</li>
+            <li>Treat poker as an applied laboratory for calibration, probabilistic reasoning, and decision-making under incomplete information.</li>
           </ul>
         </article>
         <article class="paper-card">
           <p class="card-kicker">Coaching</p>
           <h3>Youth Cross Country / Track &amp; Field Coach</h3>
           <ul class="note-list compact">
-            <li>Mentored youth athletes on training plans, race strategy, and long-term development.</li>
-            <li>Balanced performance goals with consistency, mechanics, and injury-aware progression.</li>
+            <li>Coached youth athletes across training plans, race strategy, mechanics, and long-horizon progression.</li>
+            <li>Helped 8 athletes qualify for Northeast regional championships and 4 advance to USATF National Championships.</li>
+            <li>Balanced performance goals with durability, consistency, and age-appropriate development.</li>
           </ul>
         </article>
       </div>
@@ -484,26 +463,63 @@
     <section id="skills" class="section-shell reveal">
       <div class="section-heading">
         <p class="eyebrow">Stack</p>
-        <h2>Languages, frameworks, and infrastructure I reach for repeatedly.</h2>
+        <h2>Languages, frameworks, and infrastructure.</h2>
       </div>
       <div class="skills-ledger">
         <article class="ledger-block">
           <p class="card-kicker">Languages</p>
           <div class="tag-row">
-            <span>Java</span><span>Python</span><span>C++</span><span>JavaScript</span><span>SQL</span><span>R</span>
+            <span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>R</span>
           </div>
         </article>
         <article class="ledger-block">
-          <p class="card-kicker">Frameworks</p>
+          <p class="card-kicker">ML / AI</p>
           <div class="tag-row">
-            <span>Spring Boot</span><span>Node.js</span><span>React</span><span>TensorFlow</span><span>PyTorch</span><span>NumPy / SciPy</span>
+            <span>PyTorch</span><span>TensorFlow</span><span>LoRA Pipelines</span><span>Diffusion Workflows</span><span>GNNs</span><span>Representation Learning</span><span>scikit-learn</span>
           </div>
         </article>
         <article class="ledger-block">
-          <p class="card-kicker">Infrastructure</p>
+          <p class="card-kicker">Quant / Scientific Computing</p>
           <div class="tag-row">
-            <span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>Git</span><span>RabbitMQ / Kafka</span><span>OpenMM</span><span>Prometheus / Jaeger</span>
+            <span>NumPy</span><span>SciPy</span><span>pandas</span><span>statsmodels</span><span>TDA</span><span>yfinance</span><span>BioPython</span><span>OpenMM</span>
           </div>
+        </article>
+        <article class="ledger-block">
+          <p class="card-kicker">Backend / Applications</p>
+          <div class="tag-row">
+            <span>Spring Boot</span><span>Node.js</span><span>React</span><span>REST APIs</span><span>SQL Systems</span><span>Microservices</span><span>Agentic Tooling</span>
+          </div>
+        </article>
+        <article class="ledger-block">
+          <p class="card-kicker">Cloud / Infrastructure</p>
+          <div class="tag-row">
+            <span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span><span>Fargate</span><span>Jenkins</span><span>Azure DevOps</span><span>Git</span><span>RabbitMQ</span><span>Kafka</span><span>CUDA</span><span>Linux</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview section-shell section-subtle reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Positioning</p>
+        <h2>Built for fast signal checks.</h2>
+        <p class="section-copy">The site is meant to make research depth, build range, and execution style legible in a single pass.</p>
+      </div>
+      <div class="overview-grid">
+        <article class="paper-card">
+          <p class="card-kicker">Why this format</p>
+          <h3>Proofs to products</h3>
+          <p>It is optimized for readers who want to see theoretical work, production systems, and implementation judgment side by side.</p>
+        </article>
+        <article class="paper-card">
+          <p class="card-kicker">Audience</p>
+          <h3>Who it is for</h3>
+          <p>Research groups, startups, and engineering teams evaluating whether I can move between depth, speed, and applied decision-making.</p>
+        </article>
+        <article class="paper-card">
+          <p class="card-kicker">Outside the lab</p>
+          <h3>Decision-making habits</h3>
+          <p>Distance running, poker, sports betting, chess, and long-horizon thinking under uncertainty shape how I work.</p>
         </article>
       </div>
     </section>
